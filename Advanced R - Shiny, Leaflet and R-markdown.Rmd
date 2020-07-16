@@ -1,0 +1,257 @@
+---
+title: "Boston Housing"
+author: "Jonas Hellevang"
+date: "6/2/2020"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r include = FALSE}
+
+# Loading libraries and data
+
+library(shiny)
+library(leaflet)
+library(spdep)
+library(rgdal)
+
+data(boston)
+data <- data.frame(boston.c)
+area <- readOGR(system.file("shapes/boston_tracts.shp",
+                            package="spData")[1])
+
+# Creating new pin
+
+pin <- makeIcon(
+  iconUrl = "http://icon-park.com/imagefiles/location_pin_sphere_turquoise_blue.png",
+  iconWidth = 15,
+  iconHeight = 25,
+  iconAnchor = 7,
+  iconAnchorY = 26
+  )
+
+```
+
+Where in Boston do you want your children to grow up? In this map, you can see where it is safe and where they can get more time with their teacher. For you as a parent, or even if you don't have kids, you can enjoy other selection criterions as well. as well as where you should live based on pricing and similar people like you
+
+## Map of Boston
+
+In this map, you can select your criterions and see where the markers or circles pop up (remember to select type in the bottom left corner)! If you don't want to see the different regions in the form of polygons, you can unselect them at the bottom left corner as well. The different criterions are:
+
+1. Teacher to Student Ratio. Wouldn't it be nice to know if the teacher actually have time for your children?
+2. Criminals per Person. I assume you don't want your children to grow up somewhere unsafe?
+3. Percentage Lower Status. Find a neighbourhood where you can identify yourself with your neightbours! You don't wanna move in as a low income family in a neighbourhood where you won't feel at home, do you?
+4. Median Value Housing. See where you actually can afford to live!
+
+
+```{r eruptions, echo=FALSE}
+ui <- bootstrapPage(
+  tags$style(type = "text/css", "html, body {width:100%;height:100%}"),
+  leafletOutput("map", width = "100%", height = "100%"),
+  absolutePanel(top = 10, right = 10,
+                sliderInput("teacher", "Teacher to Student Ratio", min(data$PTRATIO), 
+                            max(data$PTRATIO),
+                            value = range(data$PTRATIO), step = 0.1),
+                sliderInput("crime", "Criminals per Person", min(data$CRIM), 
+                            max(data$CRIM),
+                            value = range(data$CRIM), step = 0.1),
+                sliderInput("lstat", "Percentage Lower Status People", min(data$LSTAT), 
+                            max(data$LSTAT),
+                            value = range(data$LSTAT), step = 0.1),
+                sliderInput("medval", "Median Value Housing", min(data$CMEDV*1000), 
+                            max(data$CMEDV*1000),
+                            value = range(data$CMEDV*1000), step = 0.1)
+  ),
+  absolutePanel(bottom = 15, left = 10,
+                selectInput("type", 
+                  label = "Circles or Marker?",
+                  choices = c("None",
+                              "Circles",
+                              "Marker")),
+                checkboxInput("Polygon", "Show Polygons", TRUE)
+                )
+)
+
+server <- function(input, output, session) {
+  
+  # Reactive expression for the data subsetted to what the user selected
+  filteredData <- reactive({
+      data[data$PTRATIO >= input$teacher[1] &
+             data$PTRATIO <= input$teacher[2] &
+             data$CRIM >= input$crime[1] &
+             data$CRIM <= input$crime[2] &
+             data$LSTAT >= input$lstat[1] &
+             data$LSTAT <= input$lstat[2] &
+             data$CMEDV*1000 >= input$medval[1] &
+             data$CMEDV*1000 <= input$medval[2],]
+    })
+
+  output$map <- renderLeaflet({
+    # Use leaflet() here, and only include aspects of the map that
+    # won't need to change dynamically (at least, not unless the
+    # entire map is being torn down and recreated).
+    leaflet(data =  data, options = leafletOptions(minZoom = 10,
+                                                   maxZoom = 16)) %>%
+      addProviderTiles(providers$CartoDB.Positron) %>%
+      setView(lng = -71.06, lat = 42.361145, zoom = 10)
+  })
+  
+  # Use a separate observer to recreate the legend as needed.
+  observe({
+    proxy <- leafletProxy("map")
+
+    # Remove any existing polygon, and only if the poligon is
+    # enabled, it creates a new one.
+    proxy %>% clearControls() %>% clearShapes()
+    if (input$Polygon) {
+      proxy %>%
+        addPolygons(data = area,
+              weight = 1,
+              color = "blue",
+              fillColor = "gray",
+              highlight = highlightOptions(weight = 3, color = "white", bringToFront = TRUE),
+              popup = ~paste("Town: ", TOWN, "<br>", 
+                             "Town number: ", TOWNNO, "<br>", 
+                              "Criminals per Person: ", CRIM, "<br>",
+                              "Pupil-Teacher Ratio: ", PTRATIO, "<br>",
+                              "% Lower Status: ", LSTAT, "%", "<br>",
+                              "Property Tax-Rate per USD 10,000: ", TAX, "<br>",
+                              "Median Value Housing: ", CMEDV*1000, " USD", "<br>",
+                              "Prop. buildings from before 1940:", AGE, "<br>",
+                             "Next to Charles River: ", CHAS))
+    }
+  })
+
+  
+  # Use a separate observer to recreate the legend as needed.
+  observe({
+    proxy <- leafletProxy("map")
+
+    # Circle with more information
+    if (input$type == "Circles") {
+      proxy %>% 
+        clearMarkers() %>%
+        addCircleMarkers(data = filteredData(),
+                        radius = 5,
+                        weight = 1,
+                        color = "purple",
+                        fillColor = "white",
+                        popup = ~paste("Town: ", TOWN, "<br>", 
+                                       "Town number: ", TOWNNO, "<br>", 
+                                       "Criminals per Person: ", CRIM, "<br>",
+                                       "Pupil-Teacher Ratio: ", PTRATIO, "<br>",
+                                       "Percent Lower Status: ", LSTAT, "%", "<br>",
+                                       "Property Tax-Rate per USD 10,000: ", TAX, "<br>",
+                                       "Median Value Housing: ", CMEDV*1000, " USD", "<br>",
+                                       "Proportion buildings from before 1940: ", AGE, "<br>",
+                                       "Next to Charles River: ", CHAS))
+    }
+    # Marker for location without more info
+    if (input$type == "Marker") {
+      proxy %>% 
+        clearMarkers() %>%
+        addMarkers(data = filteredData(), icon = pin)
+    }
+    else if (input$type == "None") {
+      proxy %>% 
+        clearMarkers()
+    }
+  })
+  
+}
+
+shinyApp(ui, server, options = list(height = 1000))
+```
+
+## Criminals Per Person
+
+It is obvious from this chart, that ideally you would want to live in towns numbered below 75:
+
+```{r include = FALSE}
+library(ggplot2)
+library(ggthemes)
+library(nlme)
+library(gganimate)
+library(gapminder)
+library(ggExtra)
+library(psych)
+library(reshape2)
+library(dplyr)
+library(nycflights13)
+library(ggcorrplot)
+library(waffle)
+library(tidyr)
+library(scales)
+library(ggalt)
+library(data.table)
+library(extrafont)
+library(lubridate)
+library(DT)
+library(grid)
+library(gridExtra)
+library(prettydoc)
+library(devtools)
+library(tidyverse)
+library(ggdark)
+library(here)
+library(png)
+library(gifski)
+library(forcats)
+library(tufte)
+library(colorspace)
+library(viridisLite)
+library(Zelig)
+library(formatR)
+library(DiagrammeR)
+library(xaringan)
+library(ggridges)
+library(GGally)
+library(ggpubr)
+
+
+####CREATE THEME####
+
+#Defining the general colors  
+fill_color = '#000000'
+decoration_color = '#C0C0C0'
+main1_color = '#FF00FF'
+main2_color = '#66FFFF'
+
+#Create a personalised theme
+jonas_theme <- theme_bw() + theme(
+  panel.grid.major = element_blank(), 
+  panel.grid.minor = element_blank(),
+  plot.title = element_text(size = 14, hjust = 0.2, color = decoration_color),
+  axis.title = element_text(size = 10, hjust = 0.5, color = decoration_color),
+  axis.text = element_text(colour = decoration_color, size = 8),
+  axis.ticks = element_blank(),
+  axis.line = element_line(colour = decoration_color, size=0.3, linetype = "solid"), 
+  panel.border = element_blank(),
+  panel.grid = element_blank(),
+  strip.text = element_text(size = 12, color = decoration_color),
+  panel.background = element_rect(fill = fill_color),
+  strip.background =element_rect(fill = fill_color),
+  plot.background = element_rect(fill = fill_color),
+  legend.background = element_rect(fill = fill_color), 
+  legend.text	= element_text(size = 10, hjust = 0.5, color = decoration_color), 
+  legend.position = c(0.900, 0.80),
+  legend.key = element_blank(),
+  legend.title = element_blank(),
+)
+
+#Set the new defined theme to the default option 
+theme_set(jonas_theme)
+```
+
+```{r echo=FALSE}
+# Plot
+ggplot(as.data.table(data), 
+       aes(x=TOWNNO, y = CRIM)) +
+  geom_count(colour = main2_color) +
+  labs(x = "Town Number", y = "Criminals per Person")
+  
+```
