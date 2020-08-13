@@ -1,0 +1,350 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+First, we load the relevant libraries and then update the filepath and load the three data sources.
+```{r}
+# load libraries
+library(data.table)
+library(lubridate)
+library(leaflet)
+library(ggplot2)
+library(imputeTS)
+```
+
+```{r}
+# specify folder path
+folder_path <- 'C:/Users/danie/OneDrive/Master in Business Analytics and Big Data/14 Programming R/PR_Group Assignment/'
+```
+
+```{r}
+# load data
+solar_data <- readRDS(file.path(folder_path, 'solar_dataset.RData'))
+additional_variables <- readRDS(file.path(folder_path, 'additional_variables.RData'))
+station_info <- fread(file.path(folder_path,'station_info.csv'))
+```
+
+<font size="24"> Station Energy Production </font>
+
+<font size="12"> (file: solar_data) </font>
+
+First, we analyze the data about the energy output of each 98 solar stations. We starting by checking for missing values and see that there are no missing values.
+```{r}
+# drop empty rows which need to be predicted in this project 
+solar_data <- solar_data[Date <= 20071231]
+
+# find missing values
+sapply(data.table(sapply(solar_data[,2:99], is.na)), sum)
+```
+
+To group by month and year, we convert the date to an as.Date format and create new columns for month and year. 
+```{r}
+# convert Date column to date format
+solar_data$Date <- as.Date(strptime(solar_data$Date, format = '%Y%m%d'))
+solar_data$Month <- floor_date(solar_data$Date, 'month')
+solar_data$Year <- floor_date(solar_data$Date, 'year')
+```
+
+Next, we want to check the distribution of energy production of each station. We take the mean of each of the 98 columns of the stations. 
+
+The boxplot shows that the data is equally distributed around the mean. Both the lower and upper quartile have a similar distance from the mean, and likewise do the whiskers. 
+
+There are two outliers which we investigate in more detail. These are the stations KENT (18.70 MJ) and BOIS (18.69 MJ), which are around 0.7 megajoule higher than the next highest station HOOK (18.04 MJ). This difference seems very small, but they are considered outliers since the energy production of the other stations is so similar. 
+```{r}
+# find mean of each solar output column
+station_mean <- solar_data[, sapply(.SD, mean, na.rm = TRUE), .SDcols = colnames(solar_data[,2:99])]
+station_mean <- data.table(station = colnames(solar_data[,2:99]), mean_production = station_mean)
+station_mean <- station_mean[order(-mean_production)]
+
+# print quantiles
+print(quantile(station_mean$mean_production))
+
+# boxplot
+boxplot(station_mean$mean_production,
+        ylab = 'daily station production (joule)',
+        main = 'boxplot of mean production of each 98 stations')
+```
+
+```{r}
+# investigate outlier
+head(station_mean)
+```
+
+Next, we want to investigate how energy production changes over time. First, we start by looking at the daily production of the ACME station for the year 1994. We see that there are extremely high fluctuations from day to day. This is likely due to weather changes. 
+
+We also see a season trend. Plotting the monthly mean over the year shows in summer, the production on average is 2.5 times as high as in winter. 
+```{r}
+# plot daily solar production over one year
+plot_daily_production_one_year <- ggplot(
+  solar_data[solar_data$Date < '1995-01-01'],
+  aes(x = Date, y = ACME)) 
+plot_daily_production_one_year <- plot_daily_production_one_year + geom_line()
+plot_daily_production_one_year <- plot_daily_production_one_year + labs(
+  title = 'Daily Production (ACME Station, 1994)',
+  x = 'Month',
+  y = 'Mean Station Production (Joule)')
+
+print(plot_daily_production_one_year)
+
+# plot monthly solar production over one year
+plot(x = solar_data[Date < '1995-01-01', list(ACME = mean(ACME)), by = Month]$Month, 
+     y = solar_data[Date < '1995-01-01', list(ACME = mean(ACME)), by = Month]$ACME,
+     type = 'l',
+     main = 'Monthly Production (ACME Station, 1994)',
+     ylab = 'Mean Station Production (Joule)',
+     xlab = 'Month')
+```
+
+Continuing this investigation, we want to see if there are any long-term trends. Plotting the monthly data doesn't show much, so we aggregate yearly. We can see that there relatively strong fluctuations from year to year, between 15.5 MJ and 17.5 MJ. However, there seems to be no clear trend showing that over time, energy production is decreasing or increasing. 
+```{r}
+# plot monthly solar production over all years
+plot(x = solar_data[, list(ACME = mean(ACME)), by = Month]$Month, 
+     y = solar_data[, list(ACME = mean(ACME)), by = Month]$ACME,
+     type = 'l',
+     main = 'Monthly Production (ACME Station)',
+     ylab = 'Mean Station Production (Joule)',
+     xlab = 'Year')
+
+# plot yearly solar production over all years
+plot(x = solar_data[, list(ACME = mean(ACME)), by = Year]$Year, 
+     y = solar_data[, list(ACME = mean(ACME)), by = Year]$ACME,
+     type = 'l',
+     main = 'Yearly Production (ACME Station)',
+     ylab = 'Mean Station Production (Joule)',
+     xlab = 'Year')
+```
+
+Since we previously only looked at one station, we want to do the same analysis, but taking the mean across all stations. We see that the results are a bit smoother, but the results are the same overall. 
+```{r}
+# plot the mean solar production across all stations
+solar_data_agg <- data.table(Date = solar_data$Date, all_station_mean = apply(solar_data[,2:99], MARGIN = 1, FUN = mean))
+solar_data_agg$Month <- floor_date(solar_data_agg$Date, 'month')
+solar_data_agg$Year <- floor_date(solar_data_agg$Date, 'year')
+
+# monthly values
+plot(x = solar_data_agg[, list(all_station_mean = mean(all_station_mean)), by = Month]$Month, 
+     y = solar_data_agg[, list(all_station_mean = mean(all_station_mean)), by = Month]$all_station_mean,
+     type = 'l',
+     main = 'Monthly Production (mean of all stations)',
+     ylab = 'Mean Production (Joule)',
+     xlab = 'Year')
+
+# yearly values
+plot(x = solar_data_agg[, list(all_station_mean = mean(all_station_mean)), by = Year]$Year, 
+     y = solar_data_agg[, list(all_station_mean = mean(all_station_mean)), by = Year]$all_station_mean,
+     type = 'l',
+     main = 'Yearly Production (mean of all stations)',
+     ylab = 'Mean Production (Joule)',
+     xlab = 'Year')
+```
+
+<font size="24"> Principal Components </font>
+
+<font size="12"> (file: solar_data) </font>
+
+The following section will analyse the output of the principal component analysis.
+
+In principal component analysis, the first few principal components usually contain all the variance in the data and therefore all the information that the data provides. 
+
+To determine the number of principal components we need for modeling, we first get the variance for each column. Plotting the variance confirms that the first principal component has by far the largest variance. 
+```{r}
+# get variance of each principal component
+principal_components <- data.table(
+  principal_component = colnames(solar_data[,100:456]),
+  variance = sapply(solar_data[,100:456], var)
+)
+
+print(head(principal_components, 10))
+
+plot(principal_components$variance[1:10],
+     type = 'l',
+     main = 'Variance of the first 10 Principal Components',
+     ylab = 'Variance',
+     xlab = 'Principal Component')
+```
+
+To decide how many principal components to keep, we calculate the percentage of total variance explained by the principal component, as well as the cumulative percentage of variance explained. We see the following:
+
+Variance Explained | Number of PCs required
+-------------------|---------------------
+70%                | 4
+75%                | 6
+80%                | 10
+85%                | 20 
+
+This shows that we need a growing number of additional principal components to explain an additional 5% of the data. 
+
+Based on this, we think it's best to take the first 10 principal components in our model, which explain 80% of the data. 
+```{r}
+# get the percentage of total variance that each principal component explains
+total_variance = sum(principal_components$variance)
+principal_components$perc_of_total_variance <- principal_components$variance / total_variance
+
+# get the cumulative percentage of explained variance
+principal_components$cumulative_perc <- cumsum(principal_components$perc_of_total_variance)
+print(principal_components)
+
+plot(y = c(0, principal_components$cumulative_perc[1:20]),
+     x = c(0:20),
+     type = 'l',
+     main = 'cumulative variance of the first 20 principal components',
+     ylab = 'cumulative variance',
+     xlab = 'principal component')
+```
+
+For additional insights, we want to see the correlations between all principal components and all stations. We see that PC1 has a similar correlation to all stations, but that otherwise there is no pattern. From this we can conclude that we need to develop a different model for each station, since the PCs have a different influence and relationship for the different stations. Also, it suggests that it might be useful to not use the same PCs as inputs for each model. 
+```{r}
+# create empty data frame to store correlations
+correlationsPC <- data.frame()
+
+# calculate correlations
+for (iter_station in 2:99){
+  for (iter_pc in 100:456){
+    correlationsPC[iter_pc - 99, iter_station - 1] <- as.numeric(cor(as.numeric(solar_data[[iter_station]]), as.numeric(solar_data[[iter_pc]]), method = "pearson", use = "complete.obs"))
+  }
+}
+
+colnames(correlationsPC) <- colnames(solar_data)[2:99]
+rownames(correlationsPC) <- colnames(solar_data)[100:456]
+
+# print correlations
+print(correlationsPC)
+```
+
+<font size="24"> Additional Variables </font>
+
+<font size="12"> (file: additional_variables) </font>
+
+We start by loading the data. Then we inspect it by printing the number of columns, rows and the first 5 rows of each column.
+
+We see that are 100 columns with additional information for each day in the dataset. Many entries are zero and there are some NA entries, so we should investigate those. 
+```{r}
+# load data and inspect it
+additional_variables <- readRDS('C:/Users/danie/OneDrive/Master in Business Analytics and Big Data/14 Programming R/PR_Group Assignment/additional_variables.RData')
+sprintf('Number of rows: %d', nrow(additional_variables))
+sprintf('Number of columns: %d', ncol(additional_variables))
+head(additional_variables)
+```
+
+We start by finding the percentage of missing values. For all columns, the number of missing values is <10%.
+```{r}
+# find number of missing values per column
+data.table(
+  column = colnames(additional_variables[,2:101]),
+  n_missing = round(100 * sapply(data.table(sapply(additional_variables[,2:101], is.na)), mean), 2))
+```
+
+Next, we investigate the values which are zero. To do that, we create a custom function which finds zero, just like is.na() finds NAs. 
+
+The results show that all columns have around 70-75% of values which equal zero. This is very important, since it means that the dataset doesn't contain a lot of information. Also, some types of models like neural networks don't deal well with sparse data. 
+```{r}
+# find number of values equal to zero per column
+is.zero <- function(input){
+  output <- input == 0
+  return(output)
+}
+
+data.table(
+  column = colnames(additional_variables[,2:101]),
+  n_zero = round(100 * sapply(data.table(sapply(additional_variables[,2:101], is.zero)), mean, na.rm = TRUE), 2))
+```
+
+To deal with the NA values, we do a linear imputation. We chose the linear imputation because in a time series, it is a good assumption that the value of a data point is between it predecessor and successor. 
+```{r}
+# impute missing values
+additional_variables <- data.frame(
+  Date = additional_variables$Date,
+  sapply(additional_variables[,2:101], na_interpolation, option = 'linear'))
+
+# confirm there are no more missing columns
+data.table(
+  column = colnames(additional_variables[,2:101]),
+  n_missing = sapply(data.table(sapply(additional_variables[,2:101], is.na)), sum))
+```
+
+<font size="24"> Station Info </font>
+
+<font size="12"> (file: station_info) </font>
+
+First, we calculate the mean energy output of each station and join the two datasets to compare the mean solar output to the location. We show the data to inspect it. 
+```{r}
+# find mean of each solar output column
+station_mean <- solar_data[, sapply(.SD, mean, na.rm = TRUE), .SDcols = colnames(solar_data[,2:99])]
+station_mean <- data.table(station = colnames(solar_data[,2:99]), mean_production_per_station = station_mean)
+
+# join both station_info and station_mean
+geodata <- merge(station_info, 
+                 station_mean, 
+                 by.x = 'stid', 
+                 by.y = 'station')
+
+# inspect data
+head(geodata)
+```
+
+Next, we create a map of the mean energy production for each station. It has a color code from low production (light red) to high production (dark red).
+
+We see that there is a clear pattern, showing higher energy productions towards the west of the state.
+```{r}
+# create a color palette for the map
+pal <- colorBin(palette = 'Reds', 
+                domain = c(min(geodata$mean_production_per_station), 
+                           max(geodata$mean_production_per_station)))
+
+# create the map
+leaflet() %>%
+  addProviderTiles('CartoDB.Positron') %>%
+  addCircleMarkers(lng = geodata$elon,
+                   lat = geodata$nlat,
+                   popup = paste0('Production: ', round(geodata$mean_production/1000000, 2), ' MJ'),
+                   radius = 5,
+                   opacity = 0.5,
+                   fillOpacity = 0.5,
+                   color = pal(geodata$mean_production_per_station)) %>%
+  addLegend(title = 'mean energy production (mega joule)',
+            position = 'topright', 
+            pal = pal,
+            values = c(min(geodata$mean_production_per_station), 
+                       max(geodata$mean_production_per_station)))
+```
+
+Our hypothesis is that this trend might be related to the elevation. Therefore, we produce the same graph with elevation instead of energy production in the color code.
+
+We see the same trend, which shows that there is a high correlation between elevation and mean energy production. We calculate the correlation to get the exact value, which is 0.85. 
+
+This value is extremely useful for modeling, since all other data is general weather data and there was no way to differentiate between stations. Now, we have a strong way to differentiate between stations. 
+```{r}
+# repeat the same plotting the elevation
+pal2 <- colorBin(palette = 'Reds', 
+                 domain = c(min(geodata$elev), 
+                            max(geodata$elev)))
+
+leaflet() %>%
+  addProviderTiles('CartoDB.Positron') %>%
+  addCircleMarkers(lng = geodata$elon,
+                   lat = geodata$nlat,
+                   popup = paste0('Elevation: ', geodata$elev, ' meter'),
+                   radius = 5,
+                   opacity = 0.5,
+                   fillOpacity = 0.5,
+                   color = pal2(geodata$elev)) %>%
+  addLegend(title = 'elevation (meter)',
+            position = 'topright', 
+            pal = pal2,
+            values = c(min(geodata$elev), 
+                       max(geodata$elev)))
+```
+
+```{r}
+# get correlation between elevation and energy production
+sprintf('Correlation: %g', 
+        round(cor(geodata$elev, geodata$mean_production_per_station), 2))
+```
+
+<font size="24"> Conclusion </font>
+
+In conclusion, the only differentiating feature between the stations is its elevation. The higher the station, the higher the average energy production. However, if we create a unique model for each station, this feature won't be relevant anymore, since it would become a constant input. 
+
+The additional variables might be helpful, but because the data is so sparse (~75% values are zeros), a PCA of this data might be more useful. 
+
+For the principal components (PCs) from the main dataset, the first 20 explain 85% of the variance. However, the correlations between the PCs and the stations are not the same for all stations. Therefore, it might be useful in the modeling stage to find the most relevant PCs for each station. Nonetheless, due to non-linear interactions between PCs, it would also be a valid assumption to take the first 20, as they contain the most information. 
