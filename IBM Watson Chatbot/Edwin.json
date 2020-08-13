@@ -1,0 +1,3005 @@
+{
+  "name": "Final convo",
+  "type": "dialog",
+  "language": "en",
+  "skill_id": "de01244f-7e05-4ddd-b2b2-75d81a60788f",
+  "workspace": {
+    "intents": [
+      {
+        "intent": "Explain_Everything",
+        "examples": [
+          {
+            "text": "everything"
+          },
+          {
+            "text": "can you explain all?"
+          },
+          {
+            "text": "all"
+          },
+          {
+            "text": "can you explain that to me"
+          },
+          {
+            "text": "explain please"
+          },
+          {
+            "text": "all of them"
+          },
+          {
+            "text": "tell me everything"
+          },
+          {
+            "text": "I want to hear about all"
+          }
+        ],
+        "description": "This is used in cases where you want everything explained when you are asked if you just want some parts or all parts explained"
+      },
+      {
+        "intent": "Negative_feedback_video",
+        "examples": [
+          {
+            "text": "this video does not explain well the concepts"
+          },
+          {
+            "text": "I hate this tutorial"
+          },
+          {
+            "text": "I don't like this video"
+          },
+          {
+            "text": "This video is useless"
+          },
+          {
+            "text": "This is frustrating"
+          },
+          {
+            "text": "This tutorial is not helpful"
+          }
+        ],
+        "description": "User expressing negative feedback about the video "
+      },
+      {
+        "intent": "Greetings",
+        "examples": [
+          {
+            "text": "hey"
+          },
+          {
+            "text": "Hey how are you doing"
+          },
+          {
+            "text": "Hey there"
+          },
+          {
+            "text": "Hey there all"
+          },
+          {
+            "text": "You there"
+          },
+          {
+            "text": "Who is this?"
+          },
+          {
+            "text": "What's up?"
+          },
+          {
+            "text": "what's up"
+          },
+          {
+            "text": "What's new?"
+          },
+          {
+            "text": "Ok take me back"
+          },
+          {
+            "text": "morning"
+          },
+          {
+            "text": "Looking good eve"
+          },
+          {
+            "text": "How r u?"
+          },
+          {
+            "text": "How is it going?"
+          },
+          {
+            "text": "How have you been?"
+          },
+          {
+            "text": "How are things going?"
+          },
+          {
+            "text": "hola"
+          },
+          {
+            "text": "Hi there"
+          },
+          {
+            "text": "Hi advisor"
+          },
+          {
+            "text": "hi"
+          },
+          {
+            "text": "Hey you"
+          },
+          {
+            "text": "Hey twin"
+          },
+          {
+            "text": "How are you today?"
+          },
+          {
+            "text": "what up"
+          },
+          {
+            "text": "bonjour"
+          },
+          {
+            "text": "gm"
+          },
+          {
+            "text": "good afternoon"
+          },
+          {
+            "text": "Good day"
+          },
+          {
+            "text": "Good evening"
+          },
+          {
+            "text": "Good morning"
+          },
+          {
+            "text": "Good to see you"
+          },
+          {
+            "text": "Greetings"
+          },
+          {
+            "text": "Have you been well?"
+          },
+          {
+            "text": "Hello"
+          },
+          {
+            "text": "Hello Agent"
+          },
+          {
+            "text": "Hello I am looking for some help here"
+          }
+        ],
+        "description": "Greeting with Edwin"
+      },
+      {
+        "intent": "End_Conversation",
+        "examples": [
+          {
+            "text": "Have a nice day?"
+          },
+          {
+            "text": "Time to go"
+          },
+          {
+            "text": "That's everything"
+          },
+          {
+            "text": "That is all"
+          },
+          {
+            "text": "Stop talking to me"
+          },
+          {
+            "text": "Stop doing this"
+          },
+          {
+            "text": "Shut up"
+          },
+          {
+            "text": "See you"
+          },
+          {
+            "text": "See you later"
+          },
+          {
+            "text": "Ok goodbye"
+          },
+          {
+            "text": "It was nice chatting with you"
+          },
+          {
+            "text": "I'm leaving now"
+          },
+          {
+            "text": "Im good thank you"
+          },
+          {
+            "text": "Im done"
+          },
+          {
+            "text": "I'm done"
+          },
+          {
+            "text": "I want to quit"
+          },
+          {
+            "text": "I have got to go"
+          },
+          {
+            "text": "I d like to stop doing this"
+          },
+          {
+            "text": "I am out of here"
+          },
+          {
+            "text": "I am leaving"
+          },
+          {
+            "text": "bye"
+          },
+          {
+            "text": "talk to you later"
+          },
+          {
+            "text": "ttyl"
+          },
+          {
+            "text": "ciao"
+          },
+          {
+            "text": "cya"
+          },
+          {
+            "text": "Go away"
+          },
+          {
+            "text": "Go off"
+          },
+          {
+            "text": "Bye bye"
+          },
+          {
+            "text": "Bye now"
+          },
+          {
+            "text": "Catch you later"
+          },
+          {
+            "text": "Cya later"
+          },
+          {
+            "text": "End trial"
+          },
+          {
+            "text": "Ending this session"
+          },
+          {
+            "text": "Finished now, good bye"
+          },
+          {
+            "text": "Get lost"
+          },
+          {
+            "text": "Going now"
+          },
+          {
+            "text": "Good. bye."
+          },
+          {
+            "text": "Goodbye"
+          },
+          {
+            "text": "Hey bot go away"
+          }
+        ],
+        "description": "End the conversation."
+      },
+      {
+        "intent": "Negative_Feedback_Edwin",
+        "examples": [
+          {
+            "text": "Do not like you?"
+          },
+          {
+            "text": "You're too stupid"
+          },
+          {
+            "text": "You're really irritating"
+          },
+          {
+            "text": "You're really frustrating"
+          },
+          {
+            "text": "You do not seem smart"
+          },
+          {
+            "text": "You are very frustrating"
+          },
+          {
+            "text": "You are on my nerves"
+          },
+          {
+            "text": "You are having delusions"
+          },
+          {
+            "text": "Why are you stupid?"
+          },
+          {
+            "text": "Why are you so annoying?"
+          },
+          {
+            "text": "Stupid"
+          },
+          {
+            "text": "Robots are stupid"
+          },
+          {
+            "text": "Robots are boring"
+          },
+          {
+            "text": "Quit annoying me"
+          },
+          {
+            "text": "It is annoying"
+          },
+          {
+            "text": "I hate you"
+          },
+          {
+            "text": "I hate this!"
+          },
+          {
+            "text": "I do not like you"
+          },
+          {
+            "text": "Hate you"
+          },
+          {
+            "text": "Everyone hates you"
+          }
+        ],
+        "description": "Express unfavorable feedback."
+      },
+      {
+        "intent": "Video",
+        "examples": [
+          {
+            "text": "I want to keep watching"
+          },
+          {
+            "text": "video"
+          },
+          {
+            "text": "yes I want to keep watching it"
+          },
+          {
+            "text": "yes I want to continue with the video"
+          },
+          {
+            "text": "I will finish the video"
+          },
+          {
+            "text": "I want to continue watching the video"
+          },
+          {
+            "text": "yes video"
+          },
+          {
+            "text": "video first"
+          }
+        ],
+        "description": "check if user wants to continue watching the video"
+      },
+      {
+        "intent": "Yes",
+        "examples": [
+          {
+            "text": "yes"
+          },
+          {
+            "text": "i know, yes"
+          },
+          {
+            "text": "i know"
+          },
+          {
+            "text": "i can"
+          },
+          {
+            "text": "of course I do"
+          },
+          {
+            "text": "yes, I do"
+          },
+          {
+            "text": "of course"
+          },
+          {
+            "text": "i do"
+          },
+          {
+            "text": "hell yeah"
+          },
+          {
+            "text": "yes of course"
+          },
+          {
+            "text": "yes please"
+          },
+          {
+            "text": "yep"
+          },
+          {
+            "text": "yeah"
+          }
+        ],
+        "description": "when user want to answer yes"
+      },
+      {
+        "intent": "Ask_definitions",
+        "examples": [
+          {
+            "text": "what is ML"
+          },
+          {
+            "text": "can you tell me more about ann?"
+          },
+          {
+            "text": "I am not sure I understand what is artificial neural networks"
+          },
+          {
+            "text": "What does artificial intelligence mean"
+          },
+          {
+            "text": "what do they mean by machine learning"
+          },
+          {
+            "text": "Can you clarify the neural networks algorithm to me"
+          },
+          {
+            "text": "What does the hidden layer mean"
+          },
+          {
+            "text": "what is bias"
+          },
+          {
+            "text": "activation function?"
+          },
+          {
+            "text": "what is all these layers?"
+          },
+          {
+            "text": "what is ann?"
+          }
+        ],
+        "description": "User asking for definitions of concepts or topics mentioned in the tutorial"
+      },
+      {
+        "intent": "Positive_feedback_video",
+        "examples": [
+          {
+            "text": "Great"
+          },
+          {
+            "text": "This is great"
+          },
+          {
+            "text": "This is good"
+          },
+          {
+            "text": "It is very clear"
+          },
+          {
+            "text": "very well explained"
+          },
+          {
+            "text": "this tutorial is very helpful"
+          },
+          {
+            "text": "Very useful"
+          },
+          {
+            "text": "I understand very well the concepts"
+          }
+        ],
+        "description": "User giving positive feedback about the tutorial"
+      },
+      {
+        "intent": "Positive_Feedback_Edwin",
+        "examples": [
+          {
+            "text": "You are awesome"
+          },
+          {
+            "text": "This is so cool"
+          },
+          {
+            "text": "Love your work"
+          },
+          {
+            "text": "I'm looking forward to working with you again! :)"
+          },
+          {
+            "text": "I like what you did there! :)"
+          },
+          {
+            "text": "How cool is this?"
+          },
+          {
+            "text": "Can't believe you are that good"
+          },
+          {
+            "text": "Brilliant!"
+          },
+          {
+            "text": "You've been so helpful :)"
+          },
+          {
+            "text": "You're a genius!"
+          },
+          {
+            "text": "You the man"
+          },
+          {
+            "text": "You gave me exactly what I need!"
+          },
+          {
+            "text": "You are wonderful"
+          },
+          {
+            "text": "You are the best"
+          },
+          {
+            "text": "You are great"
+          }
+        ],
+        "description": "Express positive sentiment or gratitude."
+      },
+      {
+        "intent": "Jokes",
+        "examples": [
+          {
+            "text": "you know any jokes?"
+          },
+          {
+            "text": "I'm bored"
+          },
+          {
+            "text": "One more joke"
+          },
+          {
+            "text": "Surprise me with something hilarious"
+          },
+          {
+            "text": "Tell me a joke"
+          },
+          {
+            "text": "Tell me something funny"
+          },
+          {
+            "text": "What do you do for fun?"
+          },
+          {
+            "text": "What is your favorite joke?"
+          },
+          {
+            "text": "joke"
+          },
+          {
+            "text": "Do you like fun?"
+          },
+          {
+            "text": "Do you have humor?"
+          },
+          {
+            "text": "Do you have a joke?"
+          },
+          {
+            "text": "Are there jokes?"
+          },
+          {
+            "text": "Can you tell a joke?"
+          },
+          {
+            "text": "Can you tell me a joke?"
+          },
+          {
+            "text": "Another joke"
+          },
+          {
+            "text": "Do you like humor?"
+          },
+          {
+            "text": "I am getting bored"
+          },
+          {
+            "text": "I want a joke"
+          }
+        ],
+        "description": "When the user wants to hear a joke"
+      },
+      {
+        "intent": "Ask_examples",
+        "examples": [
+          {
+            "text": "Is there a way to illustrate how the neural networks technique works?"
+          },
+          {
+            "text": "Could you give me an example of a machine learning technique"
+          },
+          {
+            "text": "Can you elaborate on the concept of non-statistical ML"
+          },
+          {
+            "text": "Can you give me an example of a machine learning algorithm"
+          },
+          {
+            "text": "Can you give another example for neural network?"
+          },
+          {
+            "text": "can I have an example of dl"
+          },
+          {
+            "text": "can you give a real life example of dl"
+          },
+          {
+            "text": "can yu give me a real life example of dl"
+          }
+        ],
+        "description": "User ask for examples related to topics covered in the tutorial"
+      },
+      {
+        "intent": "Ask_calculations",
+        "examples": [
+          {
+            "text": "how do u calculate the weights"
+          },
+          {
+            "text": "What was the computation made to move from the hidden layer to the output layer?"
+          },
+          {
+            "text": "how are the numbers in the output layer calculated?"
+          },
+          {
+            "text": "How do you decide on the number of hidden layers you need to have and the number of nodes in each one?"
+          }
+        ],
+        "description": "User asks about how something is calculated "
+      },
+      {
+        "intent": "No",
+        "examples": [
+          {
+            "text": "what?"
+          },
+          {
+            "text": "what is even that?"
+          },
+          {
+            "text": "hell no"
+          },
+          {
+            "text": "nope"
+          },
+          {
+            "text": "no"
+          },
+          {
+            "text": "i don't know"
+          },
+          {
+            "text": "i don't"
+          },
+          {
+            "text": "no thank you"
+          },
+          {
+            "text": "never heard of"
+          },
+          {
+            "text": "i have no idea"
+          }
+        ],
+        "description": "when the user wants to answer no"
+      },
+      {
+        "intent": "Ask_difference",
+        "examples": [
+          {
+            "text": "Is there a difference between AI and machine learning?"
+          },
+          {
+            "text": "How do distinguish between ML and AI"
+          },
+          {
+            "text": "artificial intelligence VS human intelligence"
+          },
+          {
+            "text": "Can you compare machine learning to artificial intelligence"
+          },
+          {
+            "text": "what is the difference between AI and HI"
+          }
+        ],
+        "description": "User ask the difference or comparison between different topics in the tutorial"
+      }
+    ],
+    "entities": [
+      {
+        "entity": "artificial_intelligence",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "artificial intelligence",
+            "synonyms": [
+              "AI"
+            ]
+          }
+        ]
+      },
+      {
+        "entity": "artificial_neural_network",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "artificial neural network",
+            "synonyms": [
+              "ann",
+              "neural network",
+              "neural networks",
+              "artificial neural nets"
+            ]
+          }
+        ]
+      },
+      {
+        "entity": "activation_function",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "linear function",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "activation function",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "transfer function",
+            "synonyms": []
+          }
+        ]
+      },
+      {
+        "entity": "weights",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "wgt",
+            "synonyms": [
+              "wt"
+            ]
+          }
+        ]
+      },
+      {
+        "entity": "strong_ai",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "strong ai",
+            "synonyms": [
+              "strong artificial intelligence"
+            ]
+          }
+        ]
+      },
+      {
+        "entity": "bias",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "bias",
+            "synonyms": []
+          }
+        ]
+      },
+      {
+        "entity": "weak_ai",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "weak ai",
+            "synonyms": [
+              "narrow artificial intelligence",
+              "narrow ai",
+              "weak artificial intelligence"
+            ]
+          }
+        ]
+      },
+      {
+        "entity": "machine_learning",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "machine learning",
+            "synonyms": [
+              "ML"
+            ]
+          },
+          {
+            "type": "synonyms",
+            "value": "statistical machine learning",
+            "synonyms": [
+              "statistical",
+              "statistical ml",
+              "statistical machine learning",
+              "statistical ml techniques"
+            ]
+          },
+          {
+            "type": "synonyms",
+            "value": "non-statistical machine learning",
+            "synonyms": [
+              "non-statistical",
+              "non-statistical ml",
+              "non-statistical machine learning",
+              "non-statistical ml techniques",
+              "non statistical ",
+              "non statistical ml",
+              "non statistical machine learning",
+              "non statistical ml techniques",
+              "non stat"
+            ]
+          }
+        ]
+      },
+      {
+        "entity": "alphago",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "alphago",
+            "synonyms": [
+              "google alphago"
+            ]
+          }
+        ]
+      },
+      {
+        "entity": "deep_learning",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "deep neural networks",
+            "synonyms": [
+              "deep learning nets"
+            ]
+          },
+          {
+            "type": "synonyms",
+            "value": "deep learning",
+            "synonyms": [
+              "dl"
+            ]
+          }
+        ]
+      },
+      {
+        "entity": "layers",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "layers",
+            "synonyms": [
+              "all layers",
+              "layer"
+            ]
+          },
+          {
+            "type": "synonyms",
+            "value": "input layer",
+            "synonyms": [
+              "input",
+              "in"
+            ]
+          },
+          {
+            "type": "synonyms",
+            "value": "output layer",
+            "synonyms": [
+              "output",
+              "out"
+            ]
+          },
+          {
+            "type": "synonyms",
+            "value": "hidden layer",
+            "synonyms": [
+              "hidden",
+              "layers in hiding"
+            ]
+          },
+          {
+            "type": "synonyms",
+            "value": "specific layer",
+            "synonyms": [
+              "specific "
+            ]
+          }
+        ],
+        "fuzzy_match": true
+      }
+    ],
+    "metadata": {
+      "api_version": {
+        "major_version": "v2",
+        "minor_version": "2018-11-08"
+      }
+    },
+    "dialog_nodes": [
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_8_1574450594913",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_2_1574450683480"
+        },
+        "conditions": "#No",
+        "dialog_node": "response_2_1574450620339",
+        "previous_sibling": "response_1_1574450614603"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Good for you!"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_8_1574450594913",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#Yes",
+        "dialog_node": "response_1_1574450614603",
+        "previous_sibling": "node_2_1574450683480"
+      },
+      {
+        "type": "standard",
+        "title": "Artificial Neural Networks",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "An artificial neural network is an interconnected group of nodes, inspired by a simplification of neurons in the human brain. Every circular node represents an artificial neuron and the link between them represents a connection from the output of one artificial neuron to the input of another. Let me find you a photo that can illustrate it. Wait a second"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 4499,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "title": "Artificial Neural Networks",
+              "source": "https://miro.medium.com/max/1700/1*-NKbWbT9C8akN7Ht_W8nDw.png",
+              "response_type": "image"
+            },
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            }
+          ]
+        },
+        "parent": "node_8_1574450594913",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_2_1574450877449"
+        },
+        "conditions": "",
+        "dialog_node": "node_2_1574450683480"
+      },
+      {
+        "type": "standard",
+        "title": "Yes/no help",
+        "parent": "node_3_1574449026013",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#Yes || #No",
+        "dialog_node": "node_5_1574449162554"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Do you want me to explain the statistical or non-statistical techniques first? "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_1_1574449828644",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "user_input",
+          "dialog_node": "node_9_1574450529649"
+        },
+        "conditions": "#Explain_Everything || #Yes",
+        "dialog_node": "response_10_1574449970620",
+        "previous_sibling": "response_1_1574449871430"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Do that. Remember that I am here when you are wondering about something else! :)"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_1_1574449828644",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#Video",
+        "dialog_node": "response_1_1574449871430"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_9_1574874741919",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_7_1574872392740"
+        },
+        "conditions": "@machine_learning:(statistical machine learning)",
+        "dialog_node": "response_1_1574874816281",
+        "previous_sibling": "response_7_1574874782034"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_9_1574874741919",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_9_1574450529649"
+        },
+        "conditions": "@machine_learning:(non-statistical machine learning)",
+        "dialog_node": "response_7_1574874782034"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Let me find you a photo"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 4000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "source": "https://s3-us-west-2.amazonaws.com/pics.onsizzle.com/people-with-no-idea-about-al-saying-it-will-take-65491186.png",
+              "response_type": "image"
+            },
+            {
+              "time": 10000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Do you want to see another one?"
+                },
+                {
+                  "text": "You want another joke?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "random"
+            }
+          ]
+        },
+        "parent": "node_10_1574862024210",
+        "conditions": "#Yes",
+        "dialog_node": "response_6_1574862079763",
+        "previous_sibling": "response_3_1574862064648"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Alright then, I hope you at least enjoyed the video"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_10_1574862024210",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#No",
+        "dialog_node": "response_3_1574862064648",
+        "previous_sibling": "node_4_1574863134192"
+      },
+      {
+        "type": "standard",
+        "title": "Joke 2",
+        "output": {},
+        "parent": "node_10_1574862024210",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#No || #Yes",
+        "dialog_node": "node_4_1574863134192"
+      },
+      {
+        "type": "standard",
+        "title": "yes/no",
+        "parent": "node_9_1574450529649",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#Yes || #No",
+        "dialog_node": "node_8_1574450594913"
+      },
+      {
+        "type": "standard",
+        "title": "I do/do not know what these are",
+        "parent": "node_6_1574450119702",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#Yes || #No",
+        "dialog_node": "node_2_1574450279274"
+      },
+      {
+        "type": "standard",
+        "title": "Joke 1",
+        "parent": "node_8_1574861382404",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#No || #Yes",
+        "dialog_node": "node_10_1574862024210"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "I understand, machine learning can be a heavy subject... Do you want me to explain statistical- or non-statistical techniques first?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_2_1574450279274",
+        "conditions": "#No",
+        "dialog_node": "response_6_1574450429207",
+        "previous_sibling": "response_9_1574450312983"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Well done! I'm glad you were able to understand what Carrie Anne was lecturing in the video."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_2_1574450279274",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#Yes",
+        "dialog_node": "response_9_1574450312983",
+        "previous_sibling": "node_9_1574874741919"
+      },
+      {
+        "type": "standard",
+        "title": "recognizing",
+        "parent": "node_2_1574450279274",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "@machine_learning != \"machine learning\"",
+        "dialog_node": "node_9_1574874741919"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "That's your call."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_16_1574865778557",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#No",
+        "dialog_node": "response_7_1574865874195",
+        "previous_sibling": "response_10_1574865843954"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Do that! Tell me if you need any more help!"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_16_1574865778557",
+        "conditions": "#Video || #Yes",
+        "dialog_node": "response_10_1574865843954"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "This will be the last joke though, I hope you enjoy! 😊"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 4000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "source": "https://pbs.twimg.com/media/DdCyqMXW4AAZJol.jpg:large",
+              "response_type": "image"
+            },
+            {
+              "time": 10000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "I think we need to get back on track here. Did you watch the whole video?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "random"
+            }
+          ]
+        },
+        "parent": "node_7_1574863680071",
+        "conditions": "#Yes",
+        "dialog_node": "response_9_1574863680081",
+        "previous_sibling": "response_8_1574863680081"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Alright then, I hope you at least enjoyed the video"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_7_1574863680071",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#No",
+        "dialog_node": "response_8_1574863680081",
+        "previous_sibling": "node_10_1574864899052"
+      },
+      {
+        "type": "standard",
+        "title": "Did you watch the whole video? Yes/No",
+        "parent": "node_7_1574863680071",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#Yes || #No",
+        "dialog_node": "node_10_1574864899052"
+      },
+      {
+        "type": "standard",
+        "title": "yes/no",
+        "parent": "node_3_1574524156473",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#Yes || #No",
+        "dialog_node": "node_3_1574453011928"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 1500,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "I'm so sorry you feel that way. I will give your feedback to the producer of the video for their consideration."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_1_1574868504630",
+        "conditions": "#Negative_feedback_video",
+        "dialog_node": "response_3_1574868699874",
+        "previous_sibling": "response_9_1574868530831"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 1500,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "I'm so happy you liked the video. Remember to also let us know if we can do any improvements"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_1_1574868504630",
+        "conditions": "#Positive_feedback_video",
+        "dialog_node": "response_9_1574868530831"
+      },
+      {
+        "type": "standard",
+        "title": "Input Layer",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Input layer is very simple, basically it is where the initial data is fed to the neural network model."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_4_1574450986823",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "@layers:(input layer)",
+        "dialog_node": "node_7_1574452614935",
+        "previous_sibling": "node_9_1574452534499"
+      },
+      {
+        "type": "standard",
+        "title": "All layers",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Here is the definition of all the layers shown in the picture:\nInput layer — initial data for the neural network.\nHidden layers — intermediate layer between input and output layer and place where all the computation is done.  It is where the process of weighting, summing, biasing and applying\nan activation function happens. \nOutput layer — produce the result for given inputs.  "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "If we have many hidden layers we are touching a subject of deep learning. Do you want to go deeper into this?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_4_1574450986823",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "user_input",
+          "dialog_node": "node_5_1574451567761"
+        },
+        "conditions": "#Explain_Everything",
+        "dialog_node": "node_9_1574452744061",
+        "previous_sibling": "node_3_1574452702611"
+      },
+      {
+        "type": "standard",
+        "title": "Output Layer",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Output layer produces the result for the given inputs provided."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_4_1574450986823",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "@layers:(output layer)",
+        "dialog_node": "node_4_1574452658155",
+        "previous_sibling": "node_7_1574452614935"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Do you want to continue watching the video, should I explain all the layers, or do you want me to explain a specific layer?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_4_1574450986823",
+        "conditions": "#No",
+        "dialog_node": "response_7_1574451137174",
+        "previous_sibling": "response_4_1574451006040"
+      },
+      {
+        "type": "standard",
+        "title": "Hidden Layer",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "This is the intermediate layer between input and output layers and the place where all the computation is done. It is where the process of weighting, summing, biasing and applying\nan activation function is computed for all the neurons in a layer.\n"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Well, you know there can be more than one hidden layer, it can be many layers deep. If we have many hidden layers we are touching a subject of deep learning. Do you want to go deeper into this?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_4_1574450986823",
+        "conditions": "@layers:(hidden layer)",
+        "dialog_node": "node_3_1574452702611",
+        "previous_sibling": "node_4_1574452658155"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 1000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "I'm glad to hear."
+                },
+                {
+                  "text": "Amazing! Good job!"
+                },
+                {
+                  "text": "Way to go! Good job!"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_4_1574450986823",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#Yes",
+        "dialog_node": "response_4_1574451006040",
+        "previous_sibling": "node_1_1574875649903"
+      },
+      {
+        "type": "standard",
+        "title": "Specific layer",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Which one?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_4_1574450986823",
+        "conditions": "@layers:(specific layer)",
+        "dialog_node": "node_1_1574875649903",
+        "previous_sibling": "node_9_1574452744061"
+      },
+      {
+        "type": "standard",
+        "title": "Video",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Do that! Tell me if you need any more help!"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_4_1574450986823",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "user_input",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#Video",
+        "dialog_node": "node_9_1574452534499"
+      },
+      {
+        "type": "standard",
+        "title": "yes/no",
+        "parent": "node_3_1574452702611",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#Yes || #No",
+        "dialog_node": "node_5_1574451567761"
+      },
+      {
+        "type": "standard",
+        "title": "do you know what in/out/hidden layer is?",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Do you know what an input-, hidden- or output layer is as shown in the photo? "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_2_1574450683480",
+        "dialog_node": "node_2_1574450877449"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": []
+        },
+        "parent": "node_6_1574875775780",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_4_1574452658155"
+        },
+        "conditions": "@layers:(output layer)",
+        "dialog_node": "response_1_1574875839396",
+        "previous_sibling": "response_4_1574875832085"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": []
+        },
+        "parent": "node_6_1574875775780",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_7_1574452614935"
+        },
+        "conditions": "@layers:(input layer)",
+        "dialog_node": "response_4_1574875832085",
+        "previous_sibling": "response_10_1574875819683"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": []
+        },
+        "parent": "node_6_1574875775780",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574452702611"
+        },
+        "conditions": "@layers:(hidden layer)",
+        "dialog_node": "response_10_1574875819683"
+      },
+      {
+        "type": "standard",
+        "title": "Multiple condition: video or explanation",
+        "parent": "node_3_1574449632940",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#Video || #Explain_Everything",
+        "dialog_node": "node_1_1574449828644"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 1500,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "I'm so sorry you feel that way. I will take your feedback into consideration, and hopefully I will learn from it "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_17_1574868828839",
+        "conditions": "#Negative_Feedback_Edwin",
+        "dialog_node": "response_19_1574868828848",
+        "previous_sibling": "response_18_1574868828848"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 1500,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "I'm so happy you are satisfied with me. Remember to also let me know if I can improve in any ways"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_17_1574868828839",
+        "conditions": "#Positive_Feedback_Edwin",
+        "dialog_node": "response_18_1574868828848"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "If you change your mind, I have a lot of knowledge, so please don't hesitate to ask"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_5_1574449162554",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "user_input",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#No",
+        "dialog_node": "response_9_1574449266384",
+        "previous_sibling": "response_2_1574449205487"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 1000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Good. What can I help you with?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_5_1574449162554",
+        "conditions": "#Yes",
+        "dialog_node": "response_2_1574449205487"
+      },
+      {
+        "type": "standard",
+        "title": "yes/no",
+        "parent": "node_2_1574450877449",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#Yes || #No",
+        "dialog_node": "node_4_1574450986823"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 1000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Awesome!"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_3_1574453011928",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#Yes",
+        "dialog_node": "response_9_1574453020358",
+        "previous_sibling": "node_7_1574453153012"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 1500,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Understandable"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_3_1574453011928",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_7_1574453153012"
+        },
+        "conditions": "#No",
+        "dialog_node": "response_1_1574453067976",
+        "previous_sibling": "response_9_1574453020358"
+      },
+      {
+        "type": "standard",
+        "title": "Bias & Weights",
+        "output": {
+          "generic": [
+            {
+              "time": 1500,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "A weight represents the strength of the connection between units. If the weight from node 1 to node 2 has greater magnitude, it means that neuron 1 has greater influence over neuron 2. \nA weight decides how much influence the input will have on the output.\nA weight brings down the importance of the input value. Weights near zero means changing this input will not change the output. \n\n\n\nBias is like the intercept added in a linear equation. It is an additional parameter which is used to adjust the output along with the weighted sum of the inputs to the neuron. \nHere is a representation to understand better..."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 4000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "source": "https://static.packt-cdn.com/products/9781788397872/graphics/5fedeb36-6a0b-4e11-98af-159139df5b78.jpg",
+              "response_type": "image"
+            },
+            {
+              "values": [
+                {
+                  "text": "By the way, the values of these parameters before learning starts are initialised randomly (this stops them all converging to a single value). Then when presented with data during training, they are adjusted towards values that have correct output"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_3_1574453011928",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "dialog_node": "node_7_1574453153012"
+      },
+      {
+        "type": "standard",
+        "title": "choose a layer",
+        "parent": "node_1_1574875649903",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "@layers",
+        "dialog_node": "node_6_1574875775780"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Alright, good for you."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_10_1574864899052",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#Yes",
+        "dialog_node": "response_11_1574864899061",
+        "previous_sibling": "node_16_1574865778557"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Sorry. We either have to get back to the topic, or if you feel like you have gotten all the answers to your questions,  you don't have to ask me anything more 😊"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_10_1574864899052",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#Jokes",
+        "dialog_node": "response_10_1574865553125",
+        "previous_sibling": "response_12_1574864899061"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Do you want to continue to watch it?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_10_1574864899052",
+        "conditions": "#No",
+        "dialog_node": "response_12_1574864899061",
+        "previous_sibling": "response_11_1574864899061"
+      },
+      {
+        "type": "standard",
+        "title": "Video",
+        "parent": "node_10_1574864899052",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "user_input",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#Video || #Yes || #No",
+        "dialog_node": "node_16_1574865778557"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "I understand ... "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_5_1574451567761",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#No",
+        "dialog_node": "response_9_1574451594857",
+        "previous_sibling": "response_8_1574451585497"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Awesome. "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_5_1574451567761",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_8_1574451789722"
+        },
+        "conditions": "#Yes",
+        "dialog_node": "response_8_1574451585497",
+        "previous_sibling": "node_8_1574451789722"
+      },
+      {
+        "type": "standard",
+        "title": "Deep Learning",
+        "output": {
+          "generic": [
+            {
+              "time": 3000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "We refer to ‘deep learning’ because the neural networks have various (deep) layers that enable learning. Deep learning allows machines to solve complex problems even when using a data set that is very diverse, unstructured and inter-connected. The more deep learning algorithms learn, the better they perform.\nLet me show you a picture that shows how deep learning related to machine learning and to artificial intelligence..."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "title": "",
+              "source": "https://www.datamation.com/imagesvr_ce/6540/AIvsMLvsDeepLearning.png",
+              "response_type": "image"
+            }
+          ]
+        },
+        "parent": "node_5_1574451567761",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "dialog_node": "node_8_1574451789722"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Thank you for your insightful and interesting questions. I hope that I was able to add value to your learning experience, and that you feel like I was able to help you."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 1000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Have a good rest of your day! 😃 "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_3_1574866488331",
+        "disabled": true,
+        "conditions": "@sys-time < ('19:00:00')",
+        "dialog_node": "response_10_1574867776223",
+        "previous_sibling": "response_1_1574867661484"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Thank you for your insightful and interesting questions. I hope that I was able to add value to your learning experience, and that you feel like I was able to help you."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 1000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Have a good night! "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_3_1574866488331",
+        "disabled": true,
+        "conditions": "@sys-time > ('19:00:00') || @sys-time == ('19:00:00')",
+        "dialog_node": "response_1_1574867661484"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Alright then, I hope you at least enjoyed the video"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_4_1574863134192",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#No",
+        "dialog_node": "response_5_1574863134200",
+        "previous_sibling": "node_7_1574863680071"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Let me find you another photo then, hold on"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 4000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "source": "https://static.datasciencedojo.com/wp-content/uploads/machine_learning_meme.png",
+              "response_type": "image"
+            },
+            {
+              "time": 10000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Do you want to see another one?"
+                },
+                {
+                  "text": "You want another joke?"
+                },
+                {
+                  "text": ""
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "random"
+            }
+          ]
+        },
+        "parent": "node_4_1574863134192",
+        "conditions": "#Yes",
+        "dialog_node": "response_6_1574863134200",
+        "previous_sibling": "response_5_1574863134200"
+      },
+      {
+        "type": "standard",
+        "title": "Joke 3",
+        "output": {},
+        "parent": "node_4_1574863134192",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#No || #Yes",
+        "dialog_node": "node_7_1574863680071"
+      },
+      {
+        "type": "standard",
+        "title": "Deep Learning Example",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "A real life example of deep learning practice can be how deep learning is used in developing self-driving cars. \nThere's not just one AI model at work as an autonomous vehicle drives down the street. Some deep-learning models specialize in streets signs while others are trained to recognize pedestrians. As a car navigates down the road, it can be informed by up to millions of individual AI models that allow the car to act.\n"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 4000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "I have an interesting article about how to build CNN (Convolutional Neural Networks) which is one of the key techniques in Deep Learning for autonomous driving I will share with you if you are interested in digging deeper in the topic.\nhttps://towardsdatascience.com/deep-learning-for-self-driving-cars-7f198ef4cfa2"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#Ask_examples && @deep_learning",
+        "dialog_node": "node_9_1574869537349",
+        "previous_sibling": "node_5_1574524092377"
+      },
+      {
+        "type": "standard",
+        "title": "Recognize All Layers",
+        "output": {
+          "generic": []
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_9_1574452744061"
+        },
+        "conditions": "#Ask_definitions && @layers:layers",
+        "dialog_node": "node_4_1574522949037",
+        "previous_sibling": "node_10_1574522903629"
+      },
+      {
+        "type": "standard",
+        "title": "Difference between ML and AI",
+        "output": {
+          "generic": [
+            {
+              "time": 3000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Actually, a lot of tech companies tend to use AI and ML interchangeably. \nArtificial intelligence, or AI, is the science and engineering of making computers behave in ways that, until recently, we thought required human intelligence.  \nHowever, machine learning is a branch of AI and it means the study of computer algorithms that allow computer programs to automatically improve through experience. "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Also, in the video she discussed two types of machine learning techniques: Statistical and non-statistical techniques. Do you want me to explain that or would you rather continue watching the video and see if you have any other questions for me? "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "conditions": "#Ask_difference && @machine_learning:(machine learning) && @artificial_intelligence",
+        "dialog_node": "node_3_1574449632940",
+        "previous_sibling": "node_3_1574449026013"
+      },
+      {
+        "type": "standard",
+        "title": "Recognize ANN",
+        "output": {
+          "generic": []
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_2_1574450683480"
+        },
+        "conditions": "#Ask_definitions && @artificial_neural_network",
+        "dialog_node": "node_8_1574522723810",
+        "previous_sibling": "node_9_1574450529649"
+      },
+      {
+        "type": "standard",
+        "title": "Non-statistical",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Unlike statistical ML algorithms like Decision Trees and Support Vector Machines that are strongly rooted in the field of statistics. \nNon-Statistical ML techniques have no origins in statistics. In this video we are focusing on the way Artificial Neural Networks work. Do you know how it works?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "conditions": "#Ask_definitions &&    @machine_learning:(non-statistical machine learning) || @machine_learning:(non-statistical machine learning)",
+        "digress_in": "does_not_return",
+        "dialog_node": "node_9_1574450529649",
+        "previous_sibling": "node_6_1574450119702"
+      },
+      {
+        "type": "standard",
+        "title": "Continue with video",
+        "output": {
+          "generic": [
+            {
+              "time": 1500,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Sounds like a good plan. Let me know if I can assist you when you are done or if you have more questions!"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "user_input",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#Video",
+        "dialog_node": "node_7_1574935298040",
+        "previous_sibling": "node_8_1574861382404"
+      },
+      {
+        "type": "standard",
+        "title": "What more?",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "What more can I help you with?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "dialog_node": "node_3_1574449353992",
+        "previous_sibling": "Welcome"
+      },
+      {
+        "type": "standard",
+        "title": "Recognize Bias & Weights",
+        "output": {
+          "generic": []
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_7_1574453153012"
+        },
+        "conditions": "#Ask_definitions && @bias && @weights || #Ask_definitions && @bias || #Ask_definitions && @weights || @weights && @bias || @weights || @bias",
+        "dialog_node": "node_3_1574524205624",
+        "previous_sibling": "node_3_1574524156473"
+      },
+      {
+        "type": "standard",
+        "title": "Feedback Edwin",
+        "output": {},
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#Positive_Feedback_Edwin || #Negative_Feedback_Edwin",
+        "dialog_node": "node_17_1574868828839",
+        "previous_sibling": "node_1_1574868504630"
+      },
+      {
+        "type": "standard",
+        "title": "Greeting",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Hi, do you have any questions or feedback about this tutorial? "
+                },
+                {
+                  "text": "Hi there, is there a topic or concept in the tutorial you need help with? "
+                },
+                {
+                  "text": "Hi again, did you have a question? "
+                },
+                {
+                  "text": "Are you interested in me helping you or are you just bored from the video? "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "conditions": "#Greetings",
+        "dialog_node": "node_3_1574449026013",
+        "previous_sibling": "node_3_1574449353992"
+      },
+      {
+        "type": "standard",
+        "title": "Recognize Input layer",
+        "output": {
+          "generic": []
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_7_1574452614935"
+        },
+        "conditions": "#Ask_definitions && @layers:(input layer)",
+        "dialog_node": "node_10_1574522798955",
+        "previous_sibling": "node_8_1574522723810"
+      },
+      {
+        "type": "standard",
+        "title": "Machine Learning",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "\nMachine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. We have several techniques for machine learning. To not get too technical outside of the scope of the video, we are here differentiating between statistical and non-statistical methods. Do you know what any of these are? "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "conditions": "#Ask_definitions && @machine_learning:(machine learning)",
+        "dialog_node": "node_6_1574450119702",
+        "previous_sibling": "node_3_1574449632940"
+      },
+      {
+        "type": "standard",
+        "title": "Jokes",
+        "output": {
+          "generic": [
+            {
+              "time": 1000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "I know some jokes. Do you want to hear one?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "conditions": "#Jokes",
+        "digress_in": "does_not_return",
+        "dialog_node": "node_8_1574861382404",
+        "previous_sibling": "node_17_1574868828839"
+      },
+      {
+        "type": "standard",
+        "title": "Recognize Deep Learning",
+        "output": {
+          "generic": []
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_8_1574451789722"
+        },
+        "conditions": "#Ask_definitions && @deep_learning",
+        "dialog_node": "node_5_1574524092377",
+        "previous_sibling": "node_4_1574522949037"
+      },
+      {
+        "type": "standard",
+        "title": "Ending",
+        "output": {
+          "generic": [
+            {
+              "time": 2000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Thank you for your insightful and interesting questions. I hope that I was able to add value to your learning experience, and that you feel like I was able to help you."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            },
+            {
+              "time": 1000,
+              "typing": true,
+              "response_type": "pause"
+            },
+            {
+              "values": [
+                {
+                  "text": "Have a good rest of your day! 😊"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "metadata": {
+          "_customization": {
+            "mcr": false
+          }
+        },
+        "conditions": "#End_Conversation",
+        "dialog_node": "node_3_1574866488331",
+        "previous_sibling": "node_7_1574935298040"
+      },
+      {
+        "type": "standard",
+        "title": "Feedback Video",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "conditions": "#Positive_feedback_video || #Negative_feedback_video",
+        "dialog_node": "node_1_1574868504630",
+        "previous_sibling": "node_7_1574872392740"
+      },
+      {
+        "type": "standard",
+        "title": "Statistical",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "I'm sorry, but we didn't have time to cover this, so we focused on the non-statistical part of the video. I hope you enjoyed chatting."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574449353992"
+        },
+        "conditions": "#Ask_definitions &&  @machine_learning:(statistical machine learning) || @machine_learning:(statistical machine learning)",
+        "dialog_node": "node_7_1574872392740",
+        "previous_sibling": "node_3_1574524205624"
+      },
+      {
+        "type": "standard",
+        "title": "Recognize Hidden layer",
+        "output": {
+          "generic": []
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_3_1574452702611"
+        },
+        "conditions": "#Ask_definitions && @layers:(hidden layer)",
+        "dialog_node": "node_10_1574522903629",
+        "previous_sibling": "node_2_1574522857212"
+      },
+      {
+        "type": "standard",
+        "title": "Recognize Output layer",
+        "output": {
+          "generic": []
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_4_1574452658155"
+        },
+        "conditions": "#Ask_definitions && @layers:(output layer)",
+        "dialog_node": "node_2_1574522857212",
+        "previous_sibling": "node_10_1574522798955"
+      },
+      {
+        "type": "standard",
+        "title": "Anything else",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Can you explain that in another way?"
+                },
+                {
+                  "text": "I didn't get what you mean"
+                },
+                {
+                  "text": "Can you clarify?"
+                },
+                {
+                  "text": "What do you mean?"
+                },
+                {
+                  "text": "What?"
+                },
+                {
+                  "text": "Can you please explain again?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "random"
+            }
+          ]
+        },
+        "conditions": "anything_else",
+        "dialog_node": "Anything else",
+        "previous_sibling": "node_3_1574866488331",
+        "disambiguation_opt_out": true
+      },
+      {
+        "type": "standard",
+        "title": "Activation Function",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Activation function, or also called transfer function, decides, whether a neuron should be activated or not by calculating weighted sum and further adding bias with it. \nIt is basically the final step where the hidden layer performs a mathematical modification to the input so you can actually use the information collected from the unlabeled/raw data to classify what you have found. \nActivation functions are used to introduce non-linearity to neural networks.\nDid you understand the role of the bias and weights in the hidden layer?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "conditions": "#Ask_definitions && @activation_function",
+        "dialog_node": "node_3_1574524156473",
+        "previous_sibling": "node_9_1574869537349"
+      },
+      {
+        "type": "standard",
+        "title": "Welcome",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Hello. My name is Edwin, and I am here to assist you with any questions you might have about the video you are watching. If you also have any feedback about the video it would be much appreciated. Enjoy 😊 "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "conditions": "welcome",
+        "dialog_node": "Welcome"
+      }
+    ],
+    "counterexamples": [
+      {
+        "text": "i am horny"
+      },
+      {
+        "text": "thank you Edwin"
+      },
+      {
+        "text": "what is Nisrine doing tonight?"
+      },
+      {
+        "text": "what is on nisrine's face?"
+      }
+    ],
+    "system_settings": {
+      "tooling": {
+        "store_generic_responses": true
+      },
+      "off_topic": {
+        "enabled": true
+      },
+      "disambiguation": {
+        "prompt": "Did you mean:",
+        "none_of_the_above_prompt": "None of the above"
+      },
+      "human_agent_assist": {
+        "prompt": "Did you mean:"
+      },
+      "spelling_auto_correct": true
+    },
+    "learning_opt_out": false
+  },
+  "description": "",
+  "workspace_id": "de01244f-7e05-4ddd-b2b2-75d81a60788f"
+}
