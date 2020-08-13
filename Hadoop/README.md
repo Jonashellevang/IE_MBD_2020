@@ -1,4 +1,2 @@
-# CRISP-DM Methodology
-This guide can be used for you as a member of the analytical team of a company. We have presented a guide with examples for each phase of the CRISP-DM process, showing hands on which steps to take in each phase. The guide will teach you how to deal with each problem, and how to avoid mistakes or duplicate of work from any team that might be involved in the process. You will also be able to know how to deal with changes in the organization and its objectives, in data sources, and in available technology. This guide will walk you through the eight steps of CRISP-DM, their tasks and their outputs. These phases can be viewed as a cyclical methodology to emphasize the new challenges and way of work:
-
-![CRISP-DM Methodology](CRISP-DM.png)
+# Hadoop
+A brief report explaining a big data use case for DELL and Cloudera where I looked at the issue from a technical point of view in order to learn and understand the solution.
