@@ -1,5 +1,4 @@
-# MBD-JH
-This repository contains projects carried out during my Master's in Business Analytics & Big Data program while at IE School of Human Science and Technology (IE University).
+# CRISP-DM Methodology
+This guide can be used for you as a member of the analytical team of a company. We have presented a guide with examples for each phase of the CRISP-DM process, showing hands on which steps to take in each phase. The guide will teach you how to deal with each problem, and how to avoid mistakes or duplicate of work from any team that might be involved in the process. You will also be able to know how to deal with changes in the organization and its objectives, in data sources, and in available technology. This guide will walk you through the eight steps of CRISP-DM, their tasks and their outputs. These phases can be viewed as a cyclical methodology to emphasize the new challenges and way of work:
 
-# ShinyApplication and Leaflet for Boston Housing Data
-For an assignment in Advanced R we were given some choices of datasets from where we were to build an interactive map using any mapping tool we wanted, and R markdown file as well as a Shiny application. I chose the Boston Housing data and the result of the Shiny application can be viewed here: https://jonashellevang.shinyapps.io/Boston_Housing/
+![CRISP-DM Methodology](CRISP-DM.png)
