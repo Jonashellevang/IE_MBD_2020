@@ -1,1 +1,2 @@
-# blabla
+# Cluster Analysis
+The report summarizes the Cluster analysis done to the stores of a retail company located in Bogotá. This data was given by a real retail company with the objective of classifying their stores in categories based on the demographic and sales data at hand, to better distribute the product portfolio in their stores to maximize sales. Also, this company made their own categorization in the past with 4 categories, the scope of this report is also to compare our cluster analysis with their personal categorization and provide insights if there are significant differences.
