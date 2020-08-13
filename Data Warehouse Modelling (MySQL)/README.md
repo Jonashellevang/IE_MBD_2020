@@ -1,4 +1,4 @@
-# Data Warehouse Modelling
+# Data Warehouse Modelling (MySQL)
 This was a group assignment where we as a group had to present a:
 * Data Set analysis
 * Data Warehouse Approach Selection
