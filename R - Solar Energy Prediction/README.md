@@ -1,5 +1,14 @@
-# MBD-JH
-This repository contains projects carried out during my Master's in Business Analytics & Big Data program while at IE School of Human Science and Technology (IE University).
+# SUPPORT VECTOR MACHINES MODEL (best)
+The file "SVM Prediction (best prediction).csv" is the output of the most accurate model "SVM Model (best model).R". This model used the first 20 PCs from "solar_data.RData". The methodology was always a grid search and training a new model for each station.
 
-# ShinyApplication and Leaflet for Boston Housing Data
-For an assignment in Advanced R we were given some choices of datasets from where we were to build an interactive map using any mapping tool we wanted, and R markdown file as well as a Shiny application. I chose the Boston Housing data and the result of the Shiny application can be viewed here: https://jonashellevang.shinyapps.io/Boston_Housing/
+The MAE score of the best SVM model on Kaggle was 2,290,458 (public) & 2,529,143 (private)
+
+
+# NEURAL NETWORK MODEL (2nd best)
+The "Neural Network Models" zip-folder contains all neural network architectures and instructions in "Model History.xlsx".
+The best model on the validation set was "wide-and-deep 5.R". It was then retrained on the train and validation data and 
+tested on the test data, in "wide-and-deep test.R". After confirming it worked well on the test set, we made predictions
+on all 98 stations using a for-loop and training a new model every time. The code for that is "wide-and-deep prediction.R"
+and the output it "wide-and-deep prediction.csv".
+
+The MAE score of the neural network model on Kaggle was 2,368,914 (public) & 2,637,624 (private)
