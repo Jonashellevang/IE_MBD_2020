@@ -1,5 +1,5 @@
-# MBD-JH
-This repository contains projects carried out during my Master's in Business Analytics & Big Data program while at IE School of Human Science and Technology (IE University).
+# IBM Watson - Educational Chatbot
 
-# ShinyApplication and Leaflet for Boston Housing Data
-For an assignment in Advanced R we were given some choices of datasets from where we were to build an interactive map using any mapping tool we wanted, and R markdown file as well as a Shiny application. I chose the Boston Housing data and the result of the Shiny application can be viewed here: https://jonashellevang.shinyapps.io/Boston_Housing/
+Chatbot: https://integrations.eu-gb.assistant.watson.cloud.ibm.com/web/public/5bd89b95-bc98-41b3-8d24-9633c10f4b68
+
+Video used to create the chatbot: https://www.youtube.com/watch?v=z-EtmaFJieY&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&t=332s
