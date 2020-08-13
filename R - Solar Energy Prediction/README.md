@@ -1,7 +1,7 @@
 # AMS 2013-2014 Solar Energy Prediction Contest (Kaggle)
 The goal of this contest was to discover which statistical and machine learning techniques provide the best short term predictions of solar energy production. We  predicted the total daily incoming solar energy at 98 Oklahoma Mesonet sites, which serves as "solar farms" for the Kaggle competition.
 
-Link to the competition can be found [here](https://www.kaggle.com/c/ams-2014-solar-energy-prediction-contest)
+Link to the competition can be found [here](https://www.kaggle.com/c/ams-2014-solar-energy-prediction-contest).
 
 ## SUPPORT VECTOR MACHINES MODEL (best)
 The file "SVM Prediction (best prediction).csv" is the output of the most accurate model "SVM Model (best model).R". This model used the first 20 PCs from "solar_data.RData". The methodology was always a grid search and training a new model for each station.
