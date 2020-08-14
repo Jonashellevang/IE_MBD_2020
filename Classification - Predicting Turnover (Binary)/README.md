@@ -1,8 +1,7 @@
 # HR Analytics - Predicting Turnover For A Large Company (Kaggle)
 The HR Analytics dataset includes explanatory variables of around 15k employees of a large company. The goal of the case study was to model the probability of attrition (employees leaving, either on their own or because they got fired) of each individual, as well as to understand which variables are the most important ones and need to be addressed the right away.
 
-For more details on the dataset and the task check in Kaggle:
-https://www.kaggle.com/lnvardanyan/hr-analytics
+Link to the competition can be found [here](https://www.kaggle.com/lnvardanyan/hr-analytics).
 
 Throughout the model Cross Validation (CV) was used together with other measures to make sure the model is not biased or overfited, as well as tried and failed with many methods. The focus was on weighted F1 score due to the fact that the target variable, if a employee were to leave the company or not, had more 0's than 1's. To balance this relationship between precision and recall Weighted F1 was used, which gave the result of .96 with a weighted CV score of .95 (+/- 0.01).
 
