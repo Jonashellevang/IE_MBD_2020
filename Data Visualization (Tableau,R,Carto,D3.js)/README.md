@@ -28,4 +28,6 @@ As a group assignment for our "Data Visualization" class we decided to create a 
 The code can be viewed [here](http://bl.ocks.org/Jonashellevang/03ec4d5e4593a451445e8726076dbe61), and the visualization is best viewed by [clicking this link](http://bl.ocks.org/Jonashellevang/raw/03ec4d5e4593a451445e8726076dbe61/).
 
 ### How to start the visualization
-To get the visualization going, you click on the day you want to look at where "Day1" is Monday and so on, and click start. By doing so you can see that the 
+To get the visualization going, you click on the day you want to look at where "Day1" is Monday and so on, and click start. By doing so you can see that the bar line is moving through the hours of the night. You can also reset the chart, or simply press a new day and look at the new visualization, comparing the days with each other.
+
+#
