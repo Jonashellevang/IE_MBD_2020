@@ -1,4 +1,4 @@
-# Crimes in San Fransisco (Carto)
+# Crimes in San Francisco (Carto)
 For our "Data Visualization" class I created this Carto visualization, where I focused on where you find the most crime in San Francisco. Factors such as income, where police stations are placed in the city and population can be found while investigating the map.
 
 ![Crime in San Fransisco](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/Carto/Carto.png)
