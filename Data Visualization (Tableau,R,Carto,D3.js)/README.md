@@ -8,3 +8,7 @@ The dashboard is created having the Sales Managers of the Federal Communications
 ## The Two Previous Assignments:
 * [Data Warehouse Modelling (MySQL)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Warehouse%20Modelling%20(MySQL))
 * [Data Integration Design (Pentaho)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Integration%20Design%20(Pentaho))
+
+# Carto
+
+To view the map on Carto please click [this link!](https://jonashellevang.carto.com/builder/254d481d-e282-47d8-90cb-10e64c8e259a/embed)
