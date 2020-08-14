@@ -1,5 +1,4 @@
-# MBD-JH
-This repository contains projects carried out during my Master's in Business Analytics & Big Data program while at IE School of Human Science and Technology (IE University).
+# Recommendation Engines: Business Case - Instagram
+For this group assignment in Recommendation Engines we had to describe a business case that uses at least one recsys, and for this we chose to write about Instagram. The main goal was to apply the strategic thinking we learned in class in a deeper way.
 
-# ShinyApplication and Leaflet for Boston Housing Data
-For an assignment in Advanced R we were given some choices of datasets from where we were to build an interactive map using any mapping tool we wanted, and R markdown file as well as a Shiny application. I chose the Boston Housing data and the result of the Shiny application can be viewed here: https://jonashellevang.shinyapps.io/Boston_Housing/
+Instagram has been the fastest growing social media app, thanks to its recommendation system that make the platform so entertainable. However, those recommendation systems could be improved by implanting a more hybrid form that would not only suggest what you may have seen, but also suggest what your close friends have liked. Furthermore, to not overwhelm the user with useless information the option of seeing the followers with whom they interact the less and being able to unfollow them directly could be a solution to the overload of pictures, videos or stories that one could suffer from. Finally, Instagram could implement a new revenue stream with the creation of an additional service connecting businesses to an influencer that match their image and their need, using a content based recommendation system.
