@@ -11,4 +11,6 @@ The dashboard is created having the Sales Managers of the Federal Communications
 
 # Carto
 
+![Crime in San Fransisco](Carto.png)
+
 To view the map on Carto please click [this link!](https://jonashellevang.carto.com/builder/254d481d-e282-47d8-90cb-10e64c8e259a/embed)
