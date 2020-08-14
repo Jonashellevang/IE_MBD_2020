@@ -19,3 +19,13 @@ The dashboard is created having the Sales Managers of the Federal Communications
 ### The Two Previous Assignments:
 * [Data Warehouse Modelling (MySQL)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Warehouse%20Modelling%20(MySQL))
 * [Data Integration Design (Pentaho)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Integration%20Design%20(Pentaho))
+
+# One week of Jonas' Sleep (D3.js)
+As a group assignment for our "Data Visualization" class we decided to create a visualization of my sleep where we chose a Random week of the year. I have a love of electronic devices, and have tracked movement, sleep, and other health data for years through alarm clock's, weight scales, Apple Watch and my iPhone. It was fun to see how it was possible to visualize some of this data.
+
+![D3.js Visualization](D3.png)
+
+The code can be viewed [here](http://bl.ocks.org/Jonashellevang/03ec4d5e4593a451445e8726076dbe61), and the visualization is best viewed by [clicking this link](http://bl.ocks.org/Jonashellevang/raw/03ec4d5e4593a451445e8726076dbe61/).
+
+### How to start the visualization
+To get the visualization going, you click on the day you want to look at where "Day1" is Monday and so on, and click start. By doing so you can see that the 
