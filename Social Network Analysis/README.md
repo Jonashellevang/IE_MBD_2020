@@ -10,6 +10,10 @@ To continue with our analyses we asked ourself, what would be interesting to inv
 
 To make our map, we had to make it as undirected even though the data is directed. We thought of it as directed in that sense of net value of workforce moving between countries. If more people move from i.e. Sweden to Norway than the other way around, the net value would be positive for Sweden -> Norway, and the direction would also be like that.
 
+The map only shows if you open the .ipynb file in Jupyter or Google Collaboratory, so I am attaching the screenshot photo here:
+
 ![Map](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Social%20Network%20Analysis/Work%20Migration%20Map.png)
 
 Although all classes was based on learning the consepts by them selves and executing them in R, I decided to work on this project in Python. The coding is different but the consepts remain the same.
+
+To see the presentation, click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Social%20Network%20Analysis/Work%20Migration%20Presentation.pdf) or click the file "Work Migration Presentation.pdf". To see the python workbook, click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Social%20Network%20Analysis/Work%20Migration.ipynb) or click the file "Work Migration.ipynb".
