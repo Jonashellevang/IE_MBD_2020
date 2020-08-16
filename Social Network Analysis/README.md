@@ -1,3 +1,6 @@
+# Social Network Analysis Summary
+I made this summary as a way to study for the Social Networks Analysis exam. In the file you can see the consepts covered in class. Click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Social%20Network%20Analysis/Social%20Network%20Analysis%20Summary.pdf) or click the file named "Social Networks Analysis Summary.pdf".
+
 # Work Migration
 When we decided to pick this data we were looking forward to the challenges this would bring us, but we had no idea how it all would turn out both for our business case or graphs. What it turned out to be, was a data that only really made sense to get some of the centrality-measures out of. In order to get data that made sense, we cleaned our data and removed the variables that was duplicate in a sense of how we wanted to present our data.
 
