@@ -1,3 +1,22 @@
+# Class Exercises
+### [Language Models.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/Language%20Models.ipynb)
+In this notebook we went through creating sentences from grams.
+
+### [NER.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/NER.ipynb)
+In this practical lab we focused on one of the main Information Extraction methodologies: Named Entity Recognition (NER). NERs focus is to to detect and classify the names in the text.
+
+In the theoretical session we also presented three main methodologies to address the recognition of named entities:
+
+* Hidden Markov Models
+* MaxEnt Markov Models
+* Conditional Random Fields
+
+### [POS Tagging.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/POS%20Tagging.ipynb)
+In this notebook we went through the process of POS tagging.
+
+### [Semantics.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/Semantics.ipynb)
+NLTK provides a useful WordNet interface to play with the WordNet data (included into the nltk.corpus). In this notebook we learned how to use it.
+
 # Disaster Tweets (Kaggle)
 On a general note, this assignment was in particular interesting because even though concepts and theory from class was understood, we still had not run any sort of machine learning process like this. It was not until after the process of EDA I understood that when we vectorize the text, creating new features and doing “normal” machine learning processes are completely different. For me, that was the biggest discovery of this assignment. The machine learning process is way different, and that highlights the importance of proper cleaning and processing of the text.
 
