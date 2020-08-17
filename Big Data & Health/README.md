@@ -31,3 +31,6 @@ You can view the prototype by clicking [this link](https://marvelapp.com/prototy
 ![Prototype](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/The%20Blood%20Test%20Makeover.png)
 
 The presentation can be viewed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/The%20Blood%20Test%20Makeover%20Presentation.pdf).
+
+# Your.md (Now Healthily) App Presentation
+Your.md, now changed name to Healthily, is a free app where anyone, anywhere can find safe and personalised information, guidance and support for their health. This was a very quick project, but you can view the presentation I made by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/your.md%20Presentation.pdf).
