@@ -20,6 +20,15 @@ For our first assignment in "Reinforcement Learning" I worked with the OpenAI's 
 
 ![Lunar Lander](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Reinforcement%20Learning/LunarLander.gif)
 
+# Q-Learning
+As a group project in the class "Reinforcement Learning" we chose to dive deeper into the topic of Q-learning. Within reinforcement learning there are two main algorithm methods; model-based and model-free. 
+
+Model-based algorithms utilize reward functions to progressively improve the model, on the other hand model-free algorithms disregard the normal reward functions and estimate their own value functions for an unknown Markov decision process, based on experience. Examples of these different type of algorithm are Monte-Carlo Learning, Temporal-Difference Learning, and Q-Learning.
+
+The most popular of these methods is Q-Learning and like other model-free algorithms is characterized as off-policy learning. This means that the algorithm finds the best possible action considering its current position. Through this method an agent’s objective is to obtain the maximum number of points, and Q-learning attempts to learn how many points it is expected to get if it were to behave perfectly.
+
+To read the full report you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Reinforcement%20Learning/Q-Learning%20Report.pdf). The presentation can also be viewed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Reinforcement%20Learning/Q-Learning%20Presentation.pdf).
+
 # Reinforcement Learning - Final
 Due to the COVID situation our professor decided not to have an exam, rather we sent him a paper answering several questions. The report can be viewed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Reinforcement%20Learning/Reinforcement%20Learning%20-%20Final%20Report.pdf), and the report answers these questions:
 1. What is Reinforcement Learning and how is it different from other methods like Supervised or Unsupervised Learning
