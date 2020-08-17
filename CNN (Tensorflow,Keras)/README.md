@@ -11,7 +11,7 @@ The report can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/
 * [Exercise 3 - Cats vs. Dogs](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CNN%20(Tensorflow%2CKeras)/CNN%20Cats_vs_Dogs%20Exercise%203.ipynb)
 * [Exercise 3 - Flowers](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CNN%20(Tensorflow%2CKeras)/CNN%20Flowers%20Exercise%203.ipynb)
 
-## How to Avoid Overfitting
+### How to Avoid Overfitting
 As part of a forum exercise in "Computer Vision" class I wrote a short paragraph about how to avoid overfitting in CNNs:
 
 In general, the more filters we have, the more we are facing the risk of overfitting our CNN model due to the increased amount of parameters. To avoid this, we have to reduce the number of parameters, and this we obtain with the pooling operator. The pooling operator has two goals:
