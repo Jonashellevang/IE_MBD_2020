@@ -1,0 +1,502 @@
+---
+title: "How much will COVID-19 spread?"
+author: "by Group A"
+date: "04/07/2020"
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, verbose=FALSE)
+options(width = 1200)
+library(dplyr)
+library(leaflet)
+library(leaflet.extras)
+library(DataExplorer)
+library(ggplot2)
+library(gridExtra)
+library(grid)
+library(ggthemes)
+library(shiny)
+library(plotly)
+library(COVID19)
+library(shinydashboard)
+library(wordcloud)
+
+train <- read.csv('train.csv')
+test <- read.csv('test.csv')
+
+# Provinces and Countries
+train$Province_State <- as.character(train$Province_State)
+train$Country_Region <- as.character(train$Country_Region)
+test$Province_State <- as.character(test$Province_State)
+test$Country_Region <- as.character(test$Country_Region)
+
+train$Province_State <- ifelse(train$Province_State == "", train$Country_Region, train$Province_State);
+test$Province_State <- ifelse(test$Province_State == "", test$Country_Region, test$Province_State);
+
+
+# Date
+train$Date <- as.Date(train$Date, format = "%Y-%m-%d")
+test$Date <- as.Date(test$Date, format = "%Y-%m-%d")
+```
+
+# 1. Introduction 
+
+## 1.1 Objectives of the Analysis 
+In the following notebook, we tackle the COVID-19 prediction competition hosted on [Kaggle](https://www.kaggle.com/c/covid19-global-forecasting-week-4/overview). We first start by a general Exploratory Data Analysis in which we focus on the provided data as well as external data to find more insights and information about the pandemic. We then try various modeling approaches to predicting the trends of the spread of the virus in the studied countries given. Our goal is to provide the most effective model, trying to include the most relevant information into our models.
+
+## 1.2 Dataset Description 
+We are provided 3 files: a train file, a test file, and an example of a submission file (those can be found [here](https://www.kaggle.com/c/covid19-global-forecasting-week-4/data)). 
+
+The train data contains 6 columns:
+
+1. `Id`: an id given to every location analyzed;
+2. `Province_State`: the province of the country (some countries are given data divided into provinces);
+3. `Country_Region`: the country to predict for;
+4. `Date`: daily date for the reported numbers per location;
+5. `ConfirmedCases`: the numbers of confimed cases (cummulated) by country/province;
+6. `Fatalities`: the numbers of deaths by country/province.
+
+Along the notebook, we introduce external sources of data that we describe along the way.
+
+# 2. Exploratory Data Analysis
+
+We start by exploring the data given, trying to highlight trends that could help in later modelling stages.
+
+## 2.1 A Look at the structure of the data
+
+As mentionned above, the data has 6 columns for the train set and 4 columns for the test set (the two target variables being ConfirmedCases and Fatalities). 
+
+The train set consists of `r nrow(train)` rows and the test set of `r nrow(test)` rows. 
+
+We are provided with geographical data at diffeerent granularity levels: mainly at a country level but also at a province/state level for the following countries: Australia, Canada, China, Denmark, France, Netherlands, United Kingdom and the US. We should take a decision as to how to deal with this in the modelling stage later on.
+
+The other 3 columns of Date, ConfirmedCases and Fatalities could be summarized below:
+
+```{r echo = FALSE}
+summary(train[,c('ConfirmedCases','Fatalities', 'Date')])
+```
+
+We see that we have data ranging from the 22nd of January 2020 to the 15th of May 2020.
+
+As for the confirmed cases, some regions still had no cases at prior some dates and the maximum amount of cummulated cases for one region is 345,813. And for the number of deaths, the minimum is also 0 and a maximum of 33,998 deaths for a single location.
+
+## 2.2 How and Where the virus has pread: a look at cases and fatalities
+
+### 2.2.1 World heatmap of infections and fatalities
+Because we are dealing with temporal data, the best way to get insights on the data studied is to use the time component in our graphs/maps and analysis, which we do here. We got inspired by [Sambit Mukherjee](https://www.kaggle.com/sambitmukherjee/interactive-leaflet-maps-how-covid-19-spread?select=train.csv)'s map and tried to do something similar here to showcase the evolution of cases around the world through a map:
+
+```{r echo = FALSE, fig.width = 9, fig.height = 6, fig.align = "center"}
+train_week1 <- read.csv('train_week1.csv')
+train_week1 <- train_week1[,c(3:5)]
+train_week1 <- train_week1 %>% distinct(Country.Region, .keep_all = TRUE)
+names(train_week1)[names(train_week1) == "Country.Region"] <- "Country_Region"
+# Fixing Country and States
+for(i in 1:nrow(train)) {
+  if(train$Province_State[i] == train$Country_Region[i]) {
+    train$Province_State[i] <- ""
+  }
+}
+# Getting Dataframes per week + adding coordinates from week 1 data
+week_start_dates <- seq(from = min(train$Date), to = max(train$Date), by = 7)
+
+# Grouping Train by Country for Map
+train_map <- as.data.frame(train %>%
+                             select(Country_Region, Date, ConfirmedCases, Fatalities) %>%
+                             group_by(Date, Country_Region) %>%
+                             summarise(ConfirmedCases = sum(ConfirmedCases), Fatalities = sum(Fatalities)))
+
+#week_start_dates
+Jan_22 <- train_map %>% dplyr::filter(Date == week_start_dates[1])
+Jan_22 <- merge(Jan_22, train_week1, by = "Country_Region")
+Jan_29 <- train_map %>% dplyr::filter(Date == week_start_dates[2])
+Jan_29 <- merge(Jan_29, train_week1, by = "Country_Region")
+Feb_05 <- train_map %>% dplyr::filter(Date == week_start_dates[3])
+Feb_05 <- merge(Feb_05, train_week1, by = "Country_Region")
+Feb_12 <- train_map %>% dplyr::filter(Date == week_start_dates[4])
+Feb_12 <- merge(Feb_12, train_week1, by = "Country_Region")
+Feb_19 <- train_map %>% dplyr::filter(Date == week_start_dates[5])
+Feb_19 <- merge(Feb_19, train_week1, by = "Country_Region")
+Feb_26 <- train_map %>% dplyr::filter(Date == week_start_dates[6])
+Feb_26 <- merge(Feb_26, train_week1, by = "Country_Region")
+Mar_04 <- train_map %>% dplyr::filter(Date == week_start_dates[7])
+Mar_04 <- merge(Mar_04, train_week1, by = "Country_Region")
+Mar_11 <- train_map %>% dplyr::filter(Date == week_start_dates[8])
+Mar_11 <- merge(Mar_11, train_week1, by = "Country_Region")
+Mar_18 <- train_map %>% dplyr::filter(Date == week_start_dates[9])
+Mar_18 <- merge(Mar_18, train_week1, by = "Country_Region")
+Mar_25<- train_map %>% dplyr::filter(Date == week_start_dates[10])
+Mar_25 <- merge(Mar_25, train_week1, by = "Country_Region")
+Apr_01<- train_map %>% dplyr::filter(Date == week_start_dates[11])
+Apr_01 <- merge(Apr_01, train_week1, by = "Country_Region")
+Apr_08<- train_map %>% dplyr::filter(Date == week_start_dates[12])
+Apr_08 <- merge(Apr_08, train_week1, by = "Country_Region")
+Apr_15<- train_map %>% dplyr::filter(Date == week_start_dates[13])
+Apr_15 <- merge(Apr_15, train_week1, by = "Country_Region")
+Apr_22<- train_map %>% dplyr::filter(Date == week_start_dates[14])
+Apr_22 <- merge(Apr_22, train_week1, by = "Country_Region")
+Apr_29<- train_map %>% dplyr::filter(Date == week_start_dates[15])
+Apr_29 <- merge(Apr_29, train_week1, by = "Country_Region")
+May_06<- train_map %>% dplyr::filter(Date == week_start_dates[16])
+May_06 <- merge(May_06, train_week1, by = "Country_Region")
+May_13<- train_map %>% dplyr::filter(Date == week_start_dates[17])
+May_13 <- merge(May_13, train_week1, by = "Country_Region")
+
+#Maps
+leaflet() %>% 
+  addProviderTiles("CartoDB") %>% 
+  setView(lng = 0, lat = 10, zoom = 1.5) %>% 
+  addHeatmap(group = "22-Jan", data = Jan_22,lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>% 
+  addHeatmap(group = "29-Jan", data = Jan_29, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>% 
+  addHeatmap(group = "05-Feb", data = Feb_05, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>% 
+  addHeatmap(group = "12-Feb", data = Feb_12, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>% 
+  addHeatmap(group = "19-Feb", data = Feb_19, lng = ~ Long,lat = ~ Lat,intensity = ~ log(ConfirmedCases + 1), radius = 8) %>% 
+  addHeatmap(group = "26-Feb",data = Feb_26, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1),radius = 8) %>% 
+  addHeatmap(group = "04-Mar",data = Mar_04, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>% 
+  addHeatmap(group = "11-Mar", data = Mar_11, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>% 
+  addHeatmap(group = "18-Mar", data = Mar_18, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>% 
+  addHeatmap(group = "25-Mar", data = Mar_25, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>%
+  addHeatmap(group = "01-Apr", data = Apr_01, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>%
+  addHeatmap(group = "08-Apr", data = Apr_08, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>%
+  addHeatmap(group = "15-Apr", data = Apr_15, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>%
+  addHeatmap(group = "22-Apr", data = Apr_22, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>%
+  addHeatmap(group = "29-Apr", data = Apr_29, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>%
+  addHeatmap(group = "06-May", data = May_06, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>%
+  addHeatmap(group = "13-May", data = May_13, lng = ~ Long,lat = ~ Lat, intensity = ~ log(ConfirmedCases + 1), radius = 8) %>%
+  addLayersControl(baseGroups = c("22-Jan", "29-Jan", "05-Feb", "12-Feb", "19-Feb", "26-Feb", 
+                                  "04-Mar", "11-Mar", "18-Mar", "25-Mar", "01-Apr", "08-Apr", "15-Apr", "22-Apr",
+                                  "29-Apr","06-May", "13-May"), 
+                   position = "bottomleft", options = layersControlOptions(collapsed = FALSE)) %>% 
+  
+  addResetMapButton()
+```
+
+`Observations:` as can be seen, the pandemic started in China before spreading to the West and with new centers of the pandemic slowly becoming Europe and the Americas. And the same trend was followed by the number of fatalities.
+
+To better understand the patterns and to get more insights, we plot some other graphs.
+
+### 2.2.2 Plots of confirmed cases and deaths over time worldwide
+
+```{r echo = FALSE, fig.width = 12, fig.height = 5}
+# Total Cases & Fatalities
+
+covidCummulativeData <- train %>% 
+  group_by(Date) %>%
+  summarise(ConfirmedCases = sum(ConfirmedCases), Fatalities = sum(Fatalities))
+
+# Plot of Total Cases & Fatalities
+
+ggplot()+
+  geom_line(data=covidCummulativeData,aes(y=ConfirmedCases/1000000,x= Date,color="ConfirmedCases"),size=1 )+
+  geom_line(data=covidCummulativeData,aes(y=Fatalities/1000000,x= Date,color="Fatalities"),size=1) +
+  scale_colour_manual(name = "", values=c("ConfirmedCases" = "steelblue",
+                                                "Fatalities" = "#cc0000")) +
+  labs(y = 'Count in Millions') +
+  ggtitle("COVID-19 Evolution of Confirmed Cases & Fatalities") + theme_hc()
+```
+
+`Observations:` Looking at the increased trend by itslef might be misleading. It would be better to get insights on which countries for instance are driving this change.
+
+
+### 2.2.3 A more in depth look at countries' trends
+We filter the data for the top 8 most affected countries to be able to better visualize the trend and get the following:
+```{r echo = FALSE, fig.width = 12, fig.height = 5}
+# Cummulative Cases by Country
+
+topCountriesCases <-  train %>% 
+  select(Country_Region, ConfirmedCases) %>%
+  group_by(Country_Region) %>%
+  summarise(ConfirmedCases = sum(ConfirmedCases)) %>% 
+  arrange(desc(ConfirmedCases)) %>%
+  top_n(8) %>%
+  select(Country_Region)
+
+covidCummCasesCountry <- train %>%
+  select(Country_Region, Date, ConfirmedCases) %>%
+  filter(Country_Region %in% topCountriesCases$Country_Region) %>%
+  group_by(Date, Country_Region) %>%
+  summarise(ConfirmedCases = sum(ConfirmedCases))
+
+
+color_group <- c("#154360","#1A5276","#1F618D", "#2471A3", "#2980B9", "#5499C7", "#7FB3D5", "#A9CCE3")
+
+ggplot()+
+  geom_line(data=covidCummCasesCountry,aes(y=ConfirmedCases/1000000,x= Date,colour=Country_Region),size=0.5 )+
+  scale_colour_manual(name = "Countries", values=color_group) +
+  labs(y = "Count in Millions") +
+  ggtitle("Confirmed Cases by Country")+ theme_hc()-> p1
+
+# Cummulative Fatalities by Country
+
+topCountriesFatalities <-  train %>% 
+  select(Country_Region, Fatalities) %>%
+  group_by(Country_Region) %>%
+  summarise(Fatalities = sum(Fatalities)) %>% 
+  arrange(desc(Fatalities)) %>%
+  top_n(8) %>%
+  select(Country_Region)
+
+covidCummFatCountry <- train %>%
+  select(Country_Region, Date, Fatalities) %>%
+  filter(Country_Region %in% topCountriesFatalities$Country_Region) %>%
+  group_by(Date, Country_Region) %>%
+  summarise(Fatalities = sum(Fatalities))
+
+ggplot()+
+  geom_line(data=covidCummFatCountry,aes(y=Fatalities/1000000,x= Date,colour=Country_Region),size=0.5 )+
+  scale_colour_manual(name = "Countries", values=color_group) +
+  labs(y = "Count in Millions") +
+  ggtitle("Fatalities by Country")+ theme_hc()->p2
+
+grid.arrange(p1, p2, ncol = 2)
+```
+
+`Observations:` it is clear that few countries are driving this steep increase. This is the case for instance of the United States as can be seen in both graphs.
+
+This domination by the United States in terms of numbers can be seen in the illustration below for Cummulative Cases on the left and deaths on the right:
+
+```{r, figures-side, fig.show="hold", out.width="50%", echo=FALSE}
+par(mar = c(4, 4, .1, .1))
+
+covid <- as.data.frame(train %>%
+                             select(Country_Region, ConfirmedCases, Fatalities) %>%
+                             group_by(Country_Region) %>%
+                             summarise(ConfirmedCases = sum(ConfirmedCases), Fatalities = sum(Fatalities)))
+# Wordcloud for Cases
+wordcloud(covid$Country_Region,freq=covid$ConfirmedCases,colors=brewer.pal(10,"Dark2"))
+# Wordcloud for Fatalities
+wordcloud(covid$Country_Region,freq=covid$Fatalities,colors=brewer.pal(10,"Dark2"))
+```
+
+
+### 2.2.3.1 Looking at up to date numbers 
+Because the data we are provided runs only until May, we found it useful to look at trends past this date. Using the COVID19 R package, and a Shiny Application, we can have a quick look at this for most of the countries studied here. For this application, we got inspired by the approach of [Emanuele Guidotti](https://towardsdatascience.com/how-to-build-covid-19-data-driven-shiny-apps-in-5mins-2d7982882a73) that we built on top of. 
+The application is found below:
+
+```{r echo=FALSE, verbose = FALSE}
+
+shinyApp(
+  options = list(height=570),
+  ui <- dashboardPage(
+  skin = "blue",
+  dashboardHeader(title = "Up-to-date data"),
+  dashboardSidebar(
+  
+  selectInput(
+    "country", 
+    label    = "Country", 
+    multiple = TRUE, 
+    choices  = unique(covid19()$administrative_area_level_1), 
+    selected = "United States"
+  ),
+  selectInput(
+    "type", 
+    label    = "type", 
+    choices  = c("confirmed", "tests", "recovered", "deaths", "hosp", "vent")
+  ),
+  selectInput(
+    "level", 
+    label    = "Granularity", 
+    choices  = c("Country" = 1, "Region" = 2, "City" = 3), 
+    selected = 2
+  ),
+  dateRangeInput(
+    "date", 
+    label    = "Date", 
+    start    = "2020-01-01"
+  )),   
+  
+  dashboardBody(
+    fluidRow(box(width= 12, plotlyOutput("covid19plot"))))
+),
+
+# Defining the server logic
+server <- function(input, output) {
+  output$covid19plot <- renderPlotly({
+    if(!is.null(input$country)){
+      x <- covid19(
+        country = input$country, 
+        level   = input$level, 
+        start   = input$date[1], 
+        end     = input$date[2]
+      )
+      
+      color <- paste0("administrative_area_level_", input$level)
+      plot_ly(x = x[["date"]], y = x[[input$type]], color = x[[color]])
+    }
+  })
+  
+})
+  
+```
+
+`Observations:` we can see that the trends are still following the same behavior but starting to get flattened as can be seen for China (analyzed next).
+
+
+### 2.3 A look at the first epicenter of the pandemic, China
+
+As China was the first country to experience the pandemic, it might be insightful to observe the trends that occured in the country to see if information could be used for the forecasting of other countries in the modelling stage.
+
+```{r echo = FALSE, fig.width = 9, fig.height = 6}
+# Most infected provinces in China
+topProvChina <-  train %>% 
+  filter(Country_Region == "China") %>%
+  select(Province_State, ConfirmedCases) %>%
+  group_by(Province_State) %>%
+  summarise(ConfirmedCases = sum(ConfirmedCases)) %>% 
+  arrange(desc(ConfirmedCases)) %>%
+  top_n(6) %>%
+  select(Province_State)
+
+# Cummulative Cases in top provinces in China
+  cumulative_incidence_china <-  train %>%
+  filter(Country_Region == "China") %>%
+  filter(Province_State %in% topProvChina$Province_State) %>%
+  select(Province_State, Date, ConfirmedCases, Fatalities) %>%
+  group_by(Date, Province_State) %>%
+  summarise(ConfirmedCases = sum(ConfirmedCases), Fatalities = sum(Fatalities)) %>%
+  arrange(Date)
+
+# Ordering for graphs
+cumulative_incidence_china$Province_State_f = factor(cumulative_incidence_china$Province_State, 
+                                               levels=topProvChina$Province_State)
+
+# Plot                                            
+cumulative_incidence_china %>%
+  ggplot(aes(x=Date, y=ConfirmedCases),colour=val) + 
+  geom_point(size=0.2) + 
+  geom_line() +
+  scale_x_date(date_breaks="14 days", date_labels = "%d %b") +
+  facet_grid(Province_State_f ~., scales="free_y") + labs(y="Daily cumulative cases",
+                                                  title="Cases of COVID-19 in China, 2020",
+                                                  caption="Note: varying y-axis scales") +
+  theme(legend.position = "none", 
+        strip.text.y = element_text(size=8))#+ theme_hc()
+```
+
+`Observations:` it can be questionned if the country has been reporting proper numbers, but what matters for us here is that after this upward trend, we have a flattening of the line for a prolonged period of time. We might expect similar behaviors to happen for other countries and regions and should try factoring in this behavior.
+
+We can compare those trends to other provinces worldwide to get a better comprehension of the stages of the spread:
+
+```{r echo = FALSE, fig.width = 9, fig.height = 6}
+# Most infected provinces in the World
+topProvWorld <-  train %>% 
+  select(Province_State, ConfirmedCases) %>%
+  group_by(Province_State) %>%
+  summarise(ConfirmedCases = sum(ConfirmedCases)) %>% 
+  arrange(desc(ConfirmedCases)) %>%
+  top_n(6) %>%
+  select(Province_State)
+
+# Cummulative Cases in top provinces in the World
+cumulative_incidence_world <-  train %>%
+  filter(Province_State %in% topProvWorld$Province_State) %>%
+  select(Province_State, Date, ConfirmedCases) %>%
+  group_by(Date, Province_State) %>%
+  summarise(ConfirmedCases = sum(ConfirmedCases)) %>%
+  arrange(Date)
+
+# Ordering for graphs
+cumulative_incidence_world$Province_State_f = factor(cumulative_incidence_world$Province_State, 
+                                               levels=topProvWorld$Province_State)
+
+# Plot                                            
+cumulative_incidence_world %>%
+  ggplot(aes(x=Date, y=ConfirmedCases)) + 
+  geom_point(size=0.5) + 
+  geom_line() +
+  scale_x_date(date_breaks="14 days", date_labels = "%d %b") +
+  facet_grid(Province_State_f ~., scales="free_y") + labs(y="Daily cumulative cases",
+                                                          title="Cases of COVID-19 across the World, 2020",
+                                                          caption="Note: varying y-axis scales") +
+  theme(legend.position = "none", 
+        strip.text.y = element_text(size=8))
+```
+
+`Observations:` and as mentioned above, we see that other provinces such as New York are experiencing a similar rise as Hubei experienced in January and February.
+
+
+### 2.4 Ratio of fatalities through incidence
+
+Another interesting aspect we could look at is the number of death per cases to try finding patterns.
+
+```{r echo = FALSE, fig.width = 9, fig.height = 6}
+cumulative_world <-  train %>%
+  filter(Province_State %in% topProvWorld$Province_State) %>%
+  select(Province_State, Date, ConfirmedCases, Fatalities) %>%
+  group_by(Date, Province_State) %>%
+  summarise(ConfirmedCases = sum(ConfirmedCases), Fatalities = sum(Fatalities)) %>%
+  mutate(FatalityRatio = Fatalities/ConfirmedCases*100) %>%
+  arrange(Date)
+
+cumulative_world$FatalityRatio[is.nan(cumulative_world$FatalityRatio)] <- 0
+
+cumulative_world$Province_State_f = factor(cumulative_world$Province_State, 
+                                                     levels=topProvWorld$Province_State)
+
+# Plot                                            
+cumulative_world %>%
+  ggplot(aes(x=Date, y=FatalityRatio)) + 
+  geom_point(size=0.5) + 
+  geom_line() +
+  scale_x_date(date_breaks="14 days", date_labels = "%d %b") +
+  facet_grid(Province_State_f ~., scales="free_y") + labs(y="Fatalities by Number of cases",
+                                                          title="Fatalities through incidence",
+                                                          caption="Note: varying y-axis scales") +
+  theme(legend.position = "none", 
+        strip.text.y = element_text(size=8))
+```
+
+`Observations:` trends are not as apparent as before but nonetheless we can see that the US's states are following a similar behaviors.
+
+We could also look at the Mortality rate over time:
+
+```{r echo = FALSE}
+# Mortality Rate over Time
+
+cumulative_world_total <-  train %>%
+  select(Date, ConfirmedCases, Fatalities) %>%
+  group_by(Date) %>%
+  summarise(ConfirmedCases = sum(ConfirmedCases), Fatalities = sum(Fatalities)) %>%
+  mutate(FatalityRatio = Fatalities/ConfirmedCases*100) %>%
+  arrange(Date)
+
+cumulative_world_total$FatalityRatio[is.nan(cumulative_world_total$FatalityRatio)] <- 0
+
+# Plot                                            
+cumulative_world_total %>%
+  ggplot(aes(x=Date, y=FatalityRatio)) + 
+  geom_point(size=0.5) + 
+  geom_line() +
+  scale_x_date(date_breaks="14 days", date_labels = "%d %b") +
+  labs(y="Deaths per 100 Cases",
+      title="Evolution of COVID-19 Mortality Rate") +
+  theme(legend.position = "none", 
+        strip.text.y = element_text(size=8))
+```
+
+
+# 3. How have people been modelling the COVID Pandemic?
+
+As highlighted in many sources, modelling this pandemic has been hard for many reasons ranging from incomplete data for certain regions to unknown about the virus itself. However, as highlighted in [this artcile](https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/) by FiveThirtyEight, many approaches have already been thought of and could be interesting to consider or include in our modeeling stage later on. We here give a brief highlight of the main assumptions of those models for future reference:
+
+1. `Including lockdown measures`: some models took into consideration stay-at-home orders and assumes that the effectiveness of social distancing measures do decrease infection rates. Other models consider potential reopening dates into the input variables. We could maybe add as a feature the date in which the lockdown was imposed for each location later on.
+
+2. `Using people's movement data`: ohter models used as input anonymized mobile data to assess people's movements on weekly basis. Maybe this data for our purpose could be extracred from Google Trends on mouvements.
+
+3. `Including development indicators`: many models have been taking into consideration development indicators to assess the respective countries' abilities to respond to the pandemic. Reliable sources and potential APIs we could use here include the World Bank data portals.
+
+4. `Factoring in revious pandemic trends`: some other models have been using previous pandemic data as a comparison and insights for their models, such as the SARS. 
+
+5. `Using Weather Data`: many models took into consideration the hypothesis of scientists and believe that weather has a role to play in the expansion of the pandemic. We could try including this type of data as well.
+
+# 4. Conclusive Remarks 
+With a high level overview of the data, some of the trends, and some research on current approaches, we were ready to start the modelling stage, which we now turn to. We divided the modelling stage into finding a Time Series model and finding a Machine Learning model and we explain this in the attached notebooks.
+
+
+
+
+
