@@ -1,5 +1,12 @@
-# MBD-JH
-This repository contains projects carried out during my Master's in Business Analytics & Big Data program while at IE School of Human Science and Technology (IE University).
+# Convolutional Neural Nets
+As the first group assignment in "Machine Learning 3" we had to learn how to code CNNs, and as a bonus exercise, I created a [YOLOv3 Tutorial](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/YOLOv3%20Tutorial).
 
-# ShinyApplication and Leaflet for Boston Housing Data
-For an assignment in Advanced R we were given some choices of datasets from where we were to build an interactive map using any mapping tool we wanted, and R markdown file as well as a Shiny application. I chose the Boston Housing data and the result of the Shiny application can be viewed here: https://jonashellevang.shinyapps.io/Boston_Housing/
+Convolutional neural networks or convnets or CNNs are a type of neural networks specialized on images. CNNs appears in 1998 introduced in a paper by Le-cun and Bengio. They were inspired on the research in the 1950s and 1960s on the visually perception on the brain. The first Convolutional Neural Network was called Le-Net5 and was able to perform the MNIST task (recognize written digits).
+
+For the three first exercises where our goal was to build a neural net for classifying cats and dogs images, use regularization techniques and the consept of Transfer Learning.
+
+The report can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CNN%20(Tensorflow%2CKeras)/CNN%20Report.pdf), and the exercise files can be accessed here:
+[Exercise 1 - Cats vs. Dogs](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CNN%20(Tensorflow%2CKeras)/CNN%20Cats_vs_Dogs%20Exercise%201.ipynb)
+[Exercise 2 - Cats vs. Dogs](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CNN%20(Tensorflow%2CKeras)/CNN%20Cats_vs_Dogs%20Exercise%202.ipynb)
+[Exercise 3 - Cats vs. Dogs](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CNN%20(Tensorflow%2CKeras)/CNN%20Cats_vs_Dogs%20Exercise%203.ipynb)
+[Exercise 3 - Flowers](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CNN%20(Tensorflow%2CKeras)/CNN%20Flowers%20Exercise%203.ipynb)
