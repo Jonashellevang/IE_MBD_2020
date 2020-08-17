@@ -15,6 +15,11 @@ Below you can see a GIF of my race and the scoreboard where I placed 3rd out of 
 
 The youtube link to access the video can be viewed [here](https://youtu.be/nVsVUfC0EdE).
 
+# Lunar Lander
+For our first assignment in "Reinforcement Learning" I worked with the OpenAI's Lunar Lander gym. I used reinforcement learning (RL) to train a lunar lander vehicle in a Box2D simulation environment to land itself on the surface of the moon. I adjusted hyperparameters and the reward function as I considered appropriate, ran the training multiple times and compared the results. The notebook can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Reinforcement%20Learning/lunarlander.ipynb).
+
+![Lunar Lander](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Reinforcement%20Learning/LunarLander.gif)
+
 # Reinforcement Learning - Final
 Due to the COVID situation our professor decided not to have an exam, rather we sent him a paper answering several questions. The report can be viewed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Reinforcement%20Learning/Reinforcement%20Learning%20-%20Final%20Report.pdf), and the report answers these questions:
 1. What is Reinforcement Learning and how is it different from other methods like Supervised or Unsupervised Learning
