@@ -1,5 +1,6 @@
-# MBD-JH
-This repository contains projects carried out during my Master's in Business Analytics & Big Data program while at IE School of Human Science and Technology (IE University).
+# Oslo As A Smart City
+For this individual assignment in the class we had to find “use cases” that a city of our own choice has implemented. I decided to write about Oslo, not only because I'm Norwegian and have lived there for 5 years, but also because it is one of the leading countries with smart city technology.
 
-# ShinyApplication and Leaflet for Boston Housing Data
-For an assignment in Advanced R we were given some choices of datasets from where we were to build an interactive map using any mapping tool we wanted, and R markdown file as well as a Shiny application. I chose the Boston Housing data and the result of the Shiny application can be viewed here: https://jonashellevang.shinyapps.io/Boston_Housing/
+In 2019, Oslo started the year as the “European Green Capital”, awarded by the European Commission. When visiting, you can see electric or hydrogen busses driving by, hitch a ride with the tram run on electricity, park your car and pay with your phone, pay for public transportation on your phone, connect your travel route by city bikes and public transportation in the transportation planner app, check how your children are doing in kindergarten by a few clicks on your phone and much more. The city of Oslo is about digitalization, and what can be digitalized, will be digitalized. Oslo is committed to making the city as green and best for people as possible, with many projects at their hand. A few of them will be discussed when looking at different use cases about Oslo’s data strategy, smart people, smart mobility and smart environment.
+
+If you want to read more, you can access the report by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Smart%20Cities%20%26%20Governments/Oslo%20as%20a%20Smart%20City%20Report.pdf).
