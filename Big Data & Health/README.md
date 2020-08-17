@@ -1,19 +1,16 @@
-# 23andMe Report
+# 23andMe: Genetic Testing for Consumers
 For my "Big Data & Health" class we had to write a report based on our personal opinions about the case between the FDA in the United States of America and 23andMe. 
 
 23andMe is one of the first consumer based genetic testing companies, co-founded by Anne Wojcicki in Silicon Valley in 2006. In 2007, the company, together with two other companies, announced that they were going to start selling Single Nucleotide Polymorphism (SNP) chip genetic testing kits directly to consumers, which would lead to easy access at an affordable price. The SNP chip genetic testing kits sequences only parts of the genome, which is why it could be done cheaper and faster than the first methods, you simply spit and wait for the results. Their plan to sell directly to consumers was met with skepticism and concerns as this had previously only been available through doctors, and that the consumer would not know how to interpret this data. However, the sale started, at a low speed, only boosted by increased awareness due to Angelina Jolie testing and openly speaking about her results.
-Despite the free publicity from Angelina Jolie and boost in sales, Wojcicki’s original goal of reaching one million customers by the end of 2013 was not met, only reaching 450,000 consumers.
-
-As a response to low numbers in customers, the company spent $5 million on television, radio and direct mail advertisement in August 2013 to target a new set of customers.
 
 During this whole process, FDA had been involved trying to regularize this new profound innovation. The process demanded many resources from both the genome companies and the FDA, leading to a mess of an outcome for 23andMe and Wojcicki to solve, where they received a letter addressing their lack of cooperation, and seizure of further sales of medical tests.
 
-If you want to read more, click on the report called "23andMe Report.pdf" or click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/23andMe%20Report.pdf).
+If you want to read more you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/23andMe%20Report.pdf).
 
 # Healthcare Presentation
 For my "Introduction to Big Data and Analytics" course we had to chose a topic of interest to present to the rest of our classmates. I chose to look further into the healthcare industry, and how this industry can be transformed the coming years.
 
-To have a look, click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/Healtcare%20Presentation%20-%20Intro%20to%20Big%20Data.pdf) or the file called "Healtcare Presentation - Intro to Big Data.pdf".
+To have a look you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/Healtcare%20Presentation%20-%20Intro%20to%20Big%20Data.pdf).
 
 # SmellAway - Personal Health Manager
 As our last group project we had to building an innovative data based product or service to improve the way people manage their health, with the goal of improving their health outcomes and customer health experience. Our answer to this was SmellAway!
