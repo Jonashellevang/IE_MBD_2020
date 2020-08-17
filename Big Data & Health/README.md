@@ -12,6 +12,15 @@ For my "Introduction to Big Data and Analytics" course we had to chose a topic o
 
 To have a look you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/Healtcare%20Presentation%20-%20Intro%20to%20Big%20Data.pdf).
 
+# Lung Cancer
+In "Computer Vision" class we had to demonstrate the use of some image preprocessing techniques using sckit-learn. I wanted to see if there was any preprocessing techniques that would highlight the presence of cancer in a person's x-rays, and from experimenting with a few techniques, this is my final result, using thresholding:
+
+![Thresholding](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/Lung%20Cancer.png)
+
+As you can see after applying various thresholding techniques, the "Yen" technique was able to highlight the part of the lung where the cancer was forming. Thresholding is a technique where all pixels are compared to a threshold, and those below will be 0 and those above will be 255, creating these black and white images. I'm assuming Yen has a little higher threshold than the others compared to, making more of the pixels transform to white instead of black, which explains why the cancer part in the lung is here highlighted.
+
+You can review the notebook [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/Lung%20Cancer.ipynb)
+
 # SmellAway - Personal Health Manager
 As our last group project we had to building an innovative data based product or service to improve the way people manage their health, with the goal of improving their health outcomes and customer health experience. Our answer to this was SmellAway!
 
