@@ -1,6 +1,8 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 First, we load the relevant libraries and then update the filepath and load the three data sources.
 ```{r}
@@ -14,7 +16,7 @@ library(imputeTS)
 
 ```{r}
 # specify folder path
-folder_path <- 'C:/Users/danie/OneDrive/Master in Business Analytics and Big Data/14 Programming R/PR_Group Assignment/'
+folder_path <- '/Users/Jonas/Library/Mobile Documents/com~apple~CloudDocs/Documents/MBD/01. Term 1/Programming R/00. GA/'
 ```
 
 ```{r}
@@ -220,7 +222,7 @@ We start by loading the data. Then we inspect it by printing the number of colum
 We see that are 100 columns with additional information for each day in the dataset. Many entries are zero and there are some NA entries, so we should investigate those. 
 ```{r}
 # load data and inspect it
-additional_variables <- readRDS('C:/Users/danie/OneDrive/Master in Business Analytics and Big Data/14 Programming R/PR_Group Assignment/additional_variables.RData')
+additional_variables <- readRDS('/Users/Jonas/Library/Mobile Documents/com~apple~CloudDocs/Documents/MBD/01. Term 1/Programming R/00. GA/additional_variables.RData')
 sprintf('Number of rows: %d', nrow(additional_variables))
 sprintf('Number of columns: %d', ncol(additional_variables))
 head(additional_variables)
