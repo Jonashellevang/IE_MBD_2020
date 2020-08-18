@@ -1,6 +1,8 @@
 # YOLOv3 Object Detector For Detecting Guns - A Full Tutorial
 As the fourth task in our group assignment 1 for "Machine Learning 3" class we had an optional exercise to create a YOLOv3 notebook to locate & classify different objects in a single image. For this assignment I decided to create a tutorial for others to learn the process that I have gone through learning how YOLOv3 works.
 
+You can see the first parts of this assignment about CNN with Tensorflow and Keras by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/CNN%20(Tensorflow%2CKeras)).
+
 ![Gun Detection](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/YOLOv3%20Tutorial/gun%20detection.png)
 
 ### What Is YOLOv3?
@@ -14,3 +16,5 @@ Why do we use YOLO and not either one of the other deep learning algorithms for 
 * Widely used for videos due to its speed.
 
 Each image is associated with a label file saved as .txt file, and to be able to get this we have three options; we can build them from scratch with our own pictures and labels using a tool, we can use already labeled images or we can use pre-trained models. YOLOv3 is basically just another state-of-the-art (SOA), real-time object detection system for images and videos.
+
+To access the full tutorial you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/YOLOv3%20Tutorial/Weapon%20Detection%20with%20YOLOv3.ipynb).
