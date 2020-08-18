@@ -1,2 +1,2 @@
 # SQL
-For our SQL & Data Modelling class we had two group assignments, one with some very basic queries to introduce us to SQL, and one with a little bit more advanced queries. Both reports can be viewed here.
+For our SQL & Data Modelling class we had two group assignments, one with some very basic queries to introduce us to SQL that can be viewed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/SQL/Simple%20Queries%20Group%20Assignment.pdf), and one with a little bit more advanced queries that can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/SQL/More%20Advanced%20Queries%20Group%20Assignment%202.pdf).
