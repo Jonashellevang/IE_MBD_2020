@@ -4,6 +4,8 @@ This was a group assignment where we as a group had to present a:
 * Data Warehouse Approach Selection
 * Data Warehouse Design
 
+![Logical Design](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Warehouse%20Modelling%20(MySQL)/Schema%20Logical%20Design.png)
+
 ## Data Set Analysis
 We analyzed the dataset, detected duplicates and detected potential data quality issues such as missing values, incomplete values and errors. 
 
