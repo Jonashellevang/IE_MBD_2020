@@ -1,5 +1,5 @@
 # 23andMe: Genetic Testing for Consumers
-For my "Big Data & Health" class we had to write a report based on our personal opinions about the case between the FDA in the United States of America and 23andMe. 
+For my "Big Data & Health" class we had to write a report based on our personal opinions about the case between the FDA in the USA and 23andMe. 
 
 23andMe is one of the first consumer based genetic testing companies, co-founded by Anne Wojcicki in Silicon Valley in 2006. In 2007, the company, together with two other companies, announced that they were going to start selling Single Nucleotide Polymorphism (SNP) chip genetic testing kits directly to consumers, which would lead to easy access at an affordable price. The SNP chip genetic testing kits sequences only parts of the genome, which is why it could be done cheaper and faster than the first methods, you simply spit and wait for the results. Their plan to sell directly to consumers was met with skepticism and concerns as this had previously only been available through doctors, and that the consumer would not know how to interpret this data. However, the sale started, at a low speed, only boosted by increased awareness due to Angelina Jolie testing and openly speaking about her results.
 
@@ -12,14 +12,14 @@ For my "Introduction to Big Data and Analytics" course we had to chose a topic o
 
 To have a look you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/Healtcare%20Presentation%20-%20Intro%20to%20Big%20Data.pdf).
 
-# Lung Cancer
+# Lung Cancer (sckit-learn)
 In "Computer Vision" class we had to demonstrate the use of some image preprocessing techniques using sckit-learn. I wanted to see if there was any preprocessing techniques that would highlight the presence of cancer in a person's x-rays, and from experimenting with a few techniques, this is my final result, using thresholding:
 
 ![Thresholding](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/Lung%20Cancer.png)
 
 As you can see after applying various thresholding techniques, the "Yen" technique was able to highlight the part of the lung where the cancer was forming. Thresholding is a technique where all pixels are compared to a threshold, and those below will be 0 and those above will be 255, creating these black and white images. I'm assuming Yen has a little higher threshold than the others compared to, making more of the pixels transform to white instead of black, which explains why the cancer part in the lung is here highlighted.
 
-You can review the notebook [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/Lung%20Cancer.ipynb)
+You can review the notebook [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/Lung%20Cancer.ipynb). Although we learned many techniques in our "Computer Vision" class, thresholding was the only thing I tried on this image. If you want to see more techniques check out the individual assignment I did in "Computer Vision" with classification by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Classification%20on%20Images%20(sklearn)/Classifying%20Cars%2C%20Planes%20and%20Trains.ipynb).
 
 # SmellAway - Personal Health Manager
 As our last group project we had to building an innovative data based product or service to improve the way people manage their health, with the goal of improving their health outcomes and customer health experience. Our answer to this was SmellAway!
