@@ -1,6 +1,8 @@
 # AMS 2013-2014 Solar Energy Prediction Contest (Kaggle)
 The goal of this contest was to discover which statistical and machine learning techniques provide the best short term predictions of solar energy production. We  predicted the total daily incoming solar energy at 98 Oklahoma Mesonet sites, which serves as "solar farms" for the Kaggle competition. The R-Markdown is published and can be viewed by clicking [this link](https://rpubs.com/jonashellevang/Exploratory_Data_Analysis). You can also see the raw file by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20Solar%20Energy%20Prediction/Exploratory%20Data%20Analysis.Rmd).
 
+![EDA](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20Solar%20Energy%20Prediction/EDA.png)
+
 Link to the competition can be found [here](https://www.kaggle.com/c/ams-2014-solar-energy-prediction-contest).
 
 ## SUPPORT VECTOR MACHINES MODEL (best)
