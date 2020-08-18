@@ -10,9 +10,9 @@ The work done answers these questions:
 6. Is there a relation between the arrival time and the arrival delay? If you deem necessary, categorize the day into discrete parts for the arrival time. Is the relation the same for all categories of cities?
 7. What about the departure time?
 
-The work can be found above in the file "Analyzing Flight Data.ipynb" or through [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Spark/Analyzing%20Flight%20Data.ipynb).
+The work can be found through [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Spark/Analyzing%20Flight%20Data.ipynb).
 
 # San Francisco Flight Analysis
 Although I wouldn’t say that San Francisco is known for its crime, rather for its bridge and steep hills and houses. Still crime is everywhere, and it is interesting to see how this can be reduced. So how can we help the police of San Francisco, or SFPD, with its crime fighting? I have focused the analysis on location, time and severity of crime, and by doing so we can provide SFPD with facts such as in what areas there is most crime, what day crime happens the most and where. 
 
-The best way to view the work is to read the report above called "San Francisco Crime Analysis (2018 until today) Report.pdf" or by [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Spark/San%20Francisco%20Crime%20Analysis%20(2018%20until%20today)%20Report.pdf). If you wish to see the python file you can as well by clicking the file above "San Francisco Crime Analysis (2018 until today).ipynb" or through [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Spark/San%20Francisco%20Crime%20Analysis%20(2018%20until%20today).ipynb).
+The best way to view the work is to read the report by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Spark/San%20Francisco%20Crime%20Analysis%20(2018%20until%20today)%20Report.pdf). If you wish to see the python file you can as well by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Spark/San%20Francisco%20Crime%20Analysis%20(2018%20until%20today).ipynb).
