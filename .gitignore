@@ -125,3 +125,4 @@ dmypy.json
 *.pkl
 
 .DS_Store
+.Rhistory
