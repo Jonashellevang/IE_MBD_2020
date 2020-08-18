@@ -9,7 +9,9 @@ The F1 score for 0's shows that the model will 97 % of the times correctly predi
 
 Why look at F1? F1, or F-beta is a combination of precision and recall where precision is a measure of how often we are correct, while recall is a measure of how often our model finds what it is suppose to find. Any model sacrificing any of these two methods to measure model score will lower its F1 score.
 
+To see the python notebook you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Classification%20(sklearn%2Cmatplotlib)/Predicting%20Turnover.ipynb).
+
 # Pump it Up: Data Mining the Water Table (DrivenData)
 This is a multi-class DrivenData competition done using data from Taarifa and the Tanzanian Ministry of Water where the objective is to predict which water pumps are functional or need repairs. It was done as a group assignment as part of our Machine Learning II coursework using Python. The final result achieved was a classification rate of 0.8129 (top 10%).
 
-Link to the competition can be found [here](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/).
+Link to the competition can be found [here](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/), and the python notebook can be accessed through [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Classification%20(sklearn%2Cmatplotlib)/Water%20Pump%20Prediction.ipynb).
