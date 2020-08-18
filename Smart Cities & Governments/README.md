@@ -1,5 +1,5 @@
 #  Mlimi - Empowering Malawians
-The economy of Malawi, the southern Africa country, is predominantly based on agriculture. Indeed, agriculture accounts for 30% of GDP and generates over 80% of national export earnings. The sector employs more than 60% of the country’s workforce and greatly contributes to food and nutrition security. Although there is potential for better production and productivity, the agriculture sector has been operating greatly below its capacity and faces many challenges. Indeed, Malawi is the third poorest country in the world with half the population living below the poverty line.
+Smart Cities & Governments: The economy of Malawi, the southern Africa country, is predominantly based on agriculture. Indeed, agriculture accounts for 30% of GDP and generates over 80% of national export earnings. The sector employs more than 60% of the country’s workforce and greatly contributes to food and nutrition security. Although there is potential for better production and productivity, the agriculture sector has been operating greatly below its capacity and faces many challenges. Indeed, Malawi is the third poorest country in the world with half the population living below the poverty line.
 
 ![Empowering Malawians](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Smart%20Cities%20%26%20Governments/Empowering%20Malawians.png)
 
@@ -23,7 +23,7 @@ To help navigate our work, we here give an overview of the deliverables and wher
 - Javascript Google Earth Engine sample: We have extracted data from Google Earth Engine, as described in the report.
 
 # Oslo as a Smart City
-For this individual assignment in the class we had to find “use cases” that a city of our own choice has implemented. I decided to write about Oslo, not only because I'm Norwegian and have lived there for 5 years, but also because it is one of the leading countries with smart city technology.
+For this individual assignment in the "Smart Cities & Governments" class we had to find “use cases” that a city of our own choice has implemented. I decided to write about Oslo, not only because I'm Norwegian and have lived there for 5 years, but also because it is one of the leading countries with smart city technology.
 
 ![Oslo](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Smart%20Cities%20%26%20Governments/Oslo.jpg)
 
