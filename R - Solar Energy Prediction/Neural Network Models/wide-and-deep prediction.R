@@ -1,9 +1,9 @@
 ########## [1] - Load Libraries and Data ##########
 
 # change filepath here
-filepath_solar_data <- 'C:/Users/danie/OneDrive/Master in Business Analytics and Big Data/14 Programming R/PR_Group Assignment/solar_dataset.RData'
-filepath_additional_variables <- 'C:/Users/danie/OneDrive/Master in Business Analytics and Big Data/14 Programming R/PR_Group Assignment/additional_variables.RData'
-filepath_output <- 'C:/Users/danie/OneDrive/Master in Business Analytics and Big Data/14 Programming R/PR_Group Assignment/wide-and-deep prediction.csv'
+filepath_solar_data <- '/Users/Jonas/Documents/GitHub/IE_MBD_2020/R - Solar Energy Prediction/solar_dataset.RData'
+filepath_additional_variables <- '/Users/Jonas/Documents/GitHub/IE_MBD_2020/R - Solar Energy Prediction/additional_variables.RData'
+filepath_output <- '/Users/Jonas/Documents/GitHub/IE_MBD_2020/R - Solar Energy Prediction/Neural Network Models/wide-and-deep prediction.csv'
 
 # load libraries
 library(data.table)
