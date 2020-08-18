@@ -9,7 +9,7 @@ For this group assignment we had to create different functions to obtain the inf
 7. Create a function people_per_country, that receives a list of dictionaries like the one resulting from read_savings_data, and returns a dictionary where the keys are the different countries in the input, and the values are the number of people that are from each country.
 8. Create a function write_report, that writes a report in a file named report.json.
 
-You can access the file by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Python%20(Pandas%2CNumpy)/Creating%20Functions.py).
+You can access the file to see the work done by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Python%20(Pandas%2CNumpy)/Creating%20Functions.py).
 
 # Energy Analysis (.ipynb)
 This was an individual assignment where I used a dataset for energy in Spain. By clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Python%20(Pandas%2CNumpy)/Energy%20Analysis.ipynb) you can see the work done.
