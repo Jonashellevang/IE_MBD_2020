@@ -3,4 +3,4 @@ In this assignment we tackle the COVID-19 prediction competition hosted on [Kagg
 
 Below is a screenshot from the R-markdown for the EDA of a heatmap:
 
-![Heatmap](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20COVID19%20Global%20Forecasting%20/Heatmap.png)
+![Heatmap](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20COVID-19%20Global%20Forecasting%20/Heatmap.png)
