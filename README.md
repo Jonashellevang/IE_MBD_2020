@@ -344,12 +344,12 @@ This was an individual assignment where I used a dataset for IMDb and analyzed t
 
 ![IMDb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Python%20(Pandas%2CNumpy)/IMDb.png)
 
-## COVID19 Global Forecasting (Kaggle)
+## COVID-19 Global Forecasting (Kaggle)
 In this assignment we tackle the COVID-19 prediction competition hosted on [Kaggle](https://www.kaggle.com/c/covid19-global-forecasting-week-4/overview). We first start by a general Exploratory Data Analysis, that can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20COVID19%20Global%20Forecasting%20/work_EDA.Rmd). However, I would recommend seeing the work where you can play with the EDA by clicking [this link](https://jonashellevang.shinyapps.io/COVID19_Forecasting_EDA/). We focus the EDA on the provided data, as well as external data to find more insights and information about the pandemic. We then try various modeling approaches ([time series model](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20COVID19%20Global%20Forecasting%20/ts_model.R) and [machine learning model](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20COVID19%20Global%20Forecasting%20/ml_model.R)) to predict the trends of the spread of the virus in the studied countries given. Our goal was to provide the most effective model, trying to include the most relevant information into our models.
 
 Below is a screenshot from the R-markdown for the EDA of a heatmap:
 
-![Heatmap](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20COVID19%20Global%20Forecasting%20/Heatmap.png)
+![Heatmap](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20COVID-19%20Global%20Forecasting%20/Heatmap.png)
 
 ## ShinyApplication and Leaflet for Boston Housing Data
 For an assignment in "Advanced R" class we were given some choices of datasets from where we were to build an interactive map using any mapping tool we wanted, and R markdown file as well as a Shiny application. I chose the Boston Housing data.
