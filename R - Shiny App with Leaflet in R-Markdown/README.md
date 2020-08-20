@@ -1,4 +1,4 @@
-# ShinyApplication and Leaflet for Boston Housing Data
+# Shiny Application and Leaflet for Boston Housing Data
 For an assignment in "Advanced R" class we were given some choices of datasets from where we were to build an interactive map using any mapping tool we wanted, and R markdown file as well as a Shiny application. I chose the Boston Housing data.
 
 Where in Boston do you want your children to grow up? In thes map, you can see which areas is safer and where your children can get more time with their teacher. For you as a parent, or even if you don’t have kids, you can enjoy other selection criterions as well, including where you should live based on pricing and similar people like yourself.
