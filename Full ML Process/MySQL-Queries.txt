@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS predicted_outputs;
+
+CREATE DATABASE IF NOT EXISTS predicted_outputs;
+
+USE predicted_outputs;
