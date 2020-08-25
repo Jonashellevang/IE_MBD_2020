@@ -7,3 +7,6 @@
 [submodule "Advanced Python/Package"]
 	path = Advanced Python/Package
 	url = https://github.com/IE-Advanced-Python/1-package-ml-model-group-2.git
+[submodule "Advanced Python/Package a Machine Learning Model"]
+	path = Advanced Python/Package a Machine Learning Model
+	url = https://github.com/IE-Advanced-Python/1-package-ml-model-group-2.git
