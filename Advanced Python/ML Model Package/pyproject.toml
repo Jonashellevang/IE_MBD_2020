@@ -1,0 +1,9 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "ie_bike_model"
+author = "Group2"
+author-email = "jonas.hellevang@student.ie.edu"
+
