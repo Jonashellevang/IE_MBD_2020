@@ -1,5 +1,5 @@
 # Data Warehouse Modelling (MySQL)
-This was a group assignment where we as a group had to present a:
+This was the first group assignment out of two in "Business Intelligence and Datawarehousing" class where we as a group had to present a:
 * Data Set analysis
 * Data Warehouse Approach Selection
 * Data Warehouse Design
@@ -20,5 +20,5 @@ For this dataset we chose data vault. In conclusion, the advantages of the snowf
 The report can be viewed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Warehouse%20Modelling%20(MySQL)/Data%20Warehouse%20Design%20Report.pdf), and if that isn't enough, you can download the data warehouse design [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Warehouse%20Modelling%20(MySQL)/Data%20Vault%20Design.mwb).
 
 ### The Two Next Assignments:
-* [Data Integration Design (Pentaho)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Integration%20Design%20(Pentaho))
-* [Dashboard Design (Tableau)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/Dashboard%20Design%20(Tableau))
+* [Data Integration Design (Pentaho) - group project](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Integration%20Design%20(Pentaho))
+* [Dashboard Design (Tableau) - individual project](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/Dashboard%20Design%20(Tableau))
