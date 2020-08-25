@@ -1,5 +1,5 @@
 # Package a Machine Learning Model
-The task of this "Advanced Python" class assignment was to convert a machine learning model into a Python library that can be easily deployed. The folder can be accessed by [clicking this link](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Advanced%20Python/Machine%20Learning%20Model%20Package).
+The task of this "Advanced Python" class assignment was to convert a machine learning model into a Python library that can be easily deployed. The folder can be accessed by [clicking this link](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Advanced%20Python/Package%20a%20Machine%20Learning%20Model).
 
 ### Requirements of the Assignment:
 1. The library must have a pyproject.toml created using flit and a proper directory layout (1 point).
@@ -20,7 +20,7 @@ The task of this "Advanced Python" class assignment was to convert a machine lea
 * General code quality
 
 # Deploy a Machine Learning Model
-The task of this "Advanced Python" class assignment was to convert a Python library containing a reusable machine learning model into a web application. The folder can be accessed by [clicking this link](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Advanced%20Python/Deploy%20Machine%20Learning%20Model%20to%20Web%20API).
+The task of this "Advanced Python" class assignment was to convert a Python library containing a reusable machine learning model into a web application. The folder can be accessed by [clicking this link](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Advanced%20Python/Deploy%20a%20Machine%20Learning%20Model).
 
 ### Requirements of the Assignment:
 1. Create a `app.py` with a simple Flask `/` endpoint that returns a dictionary with the versions of scikit-learn, ie-bike-model, and Python (1 point).
