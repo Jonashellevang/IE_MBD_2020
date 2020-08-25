@@ -1,6 +1,0 @@
-[submodule "lib"]
-	path = lib
-	url = https://github.com/IE-Advanced-Python/ie-bike-sharing-model-lib-ref.git
-[submodule "library"]
-	path = library
-	url = https://github.com/IE-Advanced-Python/1-package-ml-model-group-2.git
