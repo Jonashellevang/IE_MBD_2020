@@ -4,3 +4,6 @@
 [submodule "Advanced Python/Deploy_ML_Web_API"]
 	path = Advanced Python/Deploy_ML_Web_API
 	url = https://github.com/IE-Advanced-Python/2-deploy-ml-web-api-Jonashellevang.git
+[submodule "Advanced Python/Package"]
+	path = Advanced Python/Package
+	url = https://github.com/IE-Advanced-Python/1-package-ml-model-group-2.git
