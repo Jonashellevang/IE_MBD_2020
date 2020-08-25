@@ -5,5 +5,5 @@ build-backend = "flit_core.buildapi"
 [tool.flit.metadata]
 module = "ie_bike_model"
 author = "Group2"
-author-email = "daniel.bilitewski@student.ie.edu"
+author-email = "jonas.hellevang@student.ie.edu"
 
