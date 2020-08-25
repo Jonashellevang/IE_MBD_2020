@@ -5,6 +5,6 @@ The dashboard is created having the Sales Managers of the Federal Communications
 
 ![Tableau Dashboard](Dashboard.png)
 
-## The Two Previous Assignments:
+### The Two Previous Assignments:
 * [Data Warehouse Modelling (MySQL)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Warehouse%20Modelling%20(MySQL))
 * [Data Integration Design (Pentaho)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Integration%20Design%20(Pentaho))
