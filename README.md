@@ -70,11 +70,37 @@ zones.
 
 The notebook is quite long due to all the coding, but can be accessed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Computer%20Vision%20(YOLOv3)/Saving%20Elephants%20with%20YOLOv3.ipynb). If you want a better picture of the work, the report is a better option and can be accessed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Computer%20Vision%20(YOLOv3)/Saving%20Elephants%20with%20YOLOv3%20Report.pdf).
 
-# [Data Integration Design (Pentaho)]()
+# [(1/3) Data Warehouse Modelling (MySQL)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Warehouse%20Modelling%20(MySQL))
+This was the first group assignment out of two in "Business Intelligence and Datawarehousing" class where we got delivered a dataset and as a group had to present a:
+* Data Set analysis
+* Data Warehouse Approach Selection
+* Data Warehouse Design
 
-# [Data Visualization (Tableau,R,Carto,D3.js)]()
+# [(2/3) Data Integration Design (Pentaho)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Integration%20Design%20(Pentaho))
+This second assignment was focused on Data Integration with Pentaho. It consisted on designing a one-time historic data load using an ETL (Extraction, Transformation, Loading) tool. That means we had to create an ETL process for each dimension and fact table(s) from the previous assignment.
 
-# [Data Warehouse Modelling (MySQL)]()
+# [Data Visualization (Tableau,R,Carto,D3.js)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js))
+### (3/3) Dashboard Design (Tableau)
+This third assignment "Business Intelligence and Datawarehousing" class was done on an individual basis and focused on generating value from our datawarehouse by designing a dashboard using Tableau. You can play with the visualization by clicking [this link](https://public.tableau.com/profile/jonas.hellevang#!/vizhome/FederalCommunicationsCommissionCustomersandAntennas/Dashboard).
+
+![Tableau Dashboard](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau,R,Carto,D3.js)/Dashboard%20Design%20(Tableau)/Dashboard.png)
+
+### Crimes in San Francisco (Carto)
+For our "Data Visualization" class I created this Carto visualization, where I focused on where you find the most crime in San Francisco. Factors such as income, where police stations are placed in the city and population can be found while investigating the map.
+
+![Crime in San Fransisco](Carto.png)
+
+### One week of Jonas' Sleep (D3.js)
+As a group assignment for our "Data Visualization" class we decided to create a visualization of my sleep where we chose a random week of the year. I have a love of electronic devices, and have tracked movement, sleep, and other health data for years through alarm clock's, weight scales, Apple Watch and my iPhone. It was fun to see how it was possible to visualize some of this data.
+
+![D3.js Visualization](D3.png)
+
+The code can be viewed [here](http://bl.ocks.org/Jonashellevang/03ec4d5e4593a451445e8726076dbe61), and the visualization is best viewed by [clicking this link](http://bl.ocks.org/Jonashellevang/raw/03ec4d5e4593a451445e8726076dbe61/).
+
+### Worldwide Alcohol and Tobacco Consumption (R - ggplot)
+For our first assignment in our "Data Visualization" class we had to create a ggplot with several plots where we had plots that was both moving and not moving. Since there are so many plots for this one, not all of them are shown here, but if you would like to check them all out, please [check out the PDF of our R-Markdown](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/R%20-%20ggplot/Worldwide%20Alcohol%20and%20Tobacco%20Consumption.pdf). If you want to see the moving plots as well, I recommend you [download the HTML file](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/R%20-%20ggplot/Worldwide%20Alcohol%20and%20Tobacco%20Consumption.html).
+
+![Tobacco Consumption Europe](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/R%20-%20ggplot/Tobacco%20Consumption%20Europe.png)
 
 # [Forecasting Time Series (R)]()
 
