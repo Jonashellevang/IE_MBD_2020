@@ -102,21 +102,94 @@ For our first assignment in our "Data Visualization" class we had to create a gg
 
 ![Tobacco Consumption Europe](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/R%20-%20ggplot/Tobacco%20Consumption%20Europe.png)
 
-# [Forecasting Time Series (R)]()
+# [Forecasting Time Series (R)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Forecasting%20Time%20Series%20(R))
+### Forecasting w/Non-Seasonality (R)
+In the first assignment in "Forecasting Time Series" class we had to do the following tasks with the data that was provided to us:
+1.	Plot the series, its correlogram and its histogram.
+2.	Using the information in the previous plots, discuss whether the series is stationary, has a marginal Normal distribution, is white noise, strict white noise or Gaussian white noise, the dynamic dependence of the series can be represented by a linear model and if there are potential non-linear dependences
+3.	For the non-stationary time series, justify the proper transformation to stationarity, and respond the same questions in 2 for the transformed stationary data.
+4.	Finally, justify your previous answers using basic statistics and formal tests when available.
 
-# [Full ML Process (Python,MySQL,Tableau)]()
+The result can be viewed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Forecasting%20Time%20Series%20(R)/Non-seasonality.pdf).
 
-# [GANs and CGANs (Tensorflow)]()
+### Forecasting w/Seasonality (R)
+In the second assignment in "Forecasting Time Series" class we had to do the following tasks with the data that was provided to us:
+1.	Find at least two linear time series models, using the Box-Jenkins methodology, for the quarterly earnings per share of Coca-Cola Company from the first quarter of 1983 to the third quarter of 2009. Identify your models using the entire available sample.
+2.	For the models identified in the previous step, leave for example the last 24 real values to compare all the models in terms of forecasting (out of sample forecasting exercise). What is the best model and why is this your choice?
 
-# [Hadoop]()
+The result can be viewed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Forecasting%20Time%20Series%20(R)/Seasonality.pdf).
 
-# [IBM Watson Chatbot]()
+# [Full ML Process (Python,MySQL,Tableau)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Full%20ML%20Process%20(Python%2CMySQL%2CTableau))
+### Python + SQL + Tableau: Integrating Python, SQL, and Tableau
 
-# [LSTM (Tensorflow)]()
+I wanted to learn the whole process from preprocessing and deploying a machine learning model in python, to storing the data to visualizing with Tableau, which is why the "[Python + SQL + Tableau: Integrating Python, SQL, and Tableau](https://www.udemy.com/course/python-sql-tableau-integrating-python-sql-and-tableau/)" course on Udemy by 365 Careers was a good choice.
 
-# [Math & Statistics for Data Analysis]()
+In the file called "[Absenteeism - Preprocessing.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Full%20ML%20Process%20(Python,MySQL,Tableau)/Absenteeism%20-%20Preprocessing.ipynb)" I did all the pre-processing steps, and from there I moved on to creating a machine learning model and saving the model in the file "[Absenteeism - Logistic Regression.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Full%20ML%20Process%20(Python,MySQL,Tableau)/Absenteeism%20-%20Logistic%20Regression.ipynb)". I put the saved machine learning model into a [python package](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Full%20ML%20Process%20(Python,MySQL,Tableau)/absenteeism_module.py) with the obligatory [pyproject.toml file](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Full%20ML%20Process%20(Python,MySQL,Tableau)/pyproject.toml) for using the machine learning model on other data in a new notebook. The notebook is called "[Absenteeism - Integration.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Full%20ML%20Process%20(Python,MySQL,Tableau)/Absenteeism%20-%20Integration.ipynb)", and this very same notebook was also used to connect to MySQL Workbench with the python package called "pymysql" to connect a bridge between Jupyter Notebook and MySQL Workbench. The queries run in MySQL can be accessed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Full%20ML%20Process%20(Python,MySQL,Tableau)/MySQL-Queries.sql).
 
-# [Natural Language Processing]()
+I also made some very simple illustrations in Tableau as instructed in the exercise. Although these are rediculously simple illustrations, they can really show the HR department some insights on who is more likely to be absent from work with either reason_1, reason_2, reason_3 or reason_4. However, reason_2 had no scenarios and was taken out of the illustration for that reason. You can see the visualization in Tableau Public by clicking [this link](https://public.tableau.com/profile/jonas.hellevang#!/vizhome/AbsenteeismfromWork_15982097719720/AbsenteeismfromWork).
+
+# [GANs and CGANs (Tensorflow)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/GANs%20and%20CGANs%20(Tensorflow))
+### Deep Generative Adverserial Nets
+In this group assignment in "Machine Learning III" class we pursued the following objectives:
+- To understand and create our own Generative Adversarial Neural Nets
+- To evolve them to create Conditional Adversarial Neural Nets
+
+The topic is described further in the report that you can access by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/GANs%20and%20CGANs%20(Tensorflow)/GANs%20and%20CGANs%20Report.pdf).
+
+# [Hadoop](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Hadoop)
+### Cloudera and Dell - Big Data Use Case
+For "Hadoop" Class we had to write about a big data use case. I chose to write about DELL and Cloudera where I looked at the issue from a technical point of view in order to learn and understand the solution. The report can be accessed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Hadoop/Cloudera%20and%20Dell%20-%20Big%20Data%20Use%20Case.pdf).
+
+### Apache Hive Queries
+For "Hadoop" class we had to analyze the available data files from Twitter. The PDF-file with the required statements can be viewed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Hadoop/Apache%20Hive%20Queries.pdf).
+
+# [IBM Watson Chatbot](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/IBM%20Watson%20Chatbot)
+### IBM Watson - Edwin, The Educational Chatbot
+For the class "Watson Challenge" we had to create a chatbot based on our own idea, where we decided to create a chatbot for MOOC's in the educational sector that we named "Edwin". This chatbot can however help when watching videos, replacing teachers because the chatbot will be ble to answer your questions.
+
+# [LSTM (Tensorflow)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/LSTM%20(Tensorflow))
+### LSTMs For Time Series (Tensorflow)
+This pracitce file is a tutorial from Tensorflow that I used and played with after our session about RNN and LSTM in "Machine Learning 3" class. Although it does not show my own work in the terms that this file is provided, it gave me the knowledge on how to do this on my own. The file can be accessed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/LSTM%20(Tensorflow)/LSTMs%20for%20time%20series.ipynb).
+
+# [Math & Statistics for Data Analysis](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Math%20%26%20Statistics%20for%20Data%20Analysis)
+### Exploratory Data Analysis Report
+This is an individual assignment for "Math & Statistics for Data Analysis" class where I:
+* Preprocessed the data by removing rows containing missing values
+* Presented a table with the descriptive statistics of all car properties (min, max, mean, median, quartiles)
+* Presented plots of histograms of the various properties
+* Presented boxplots of the price for each car brand
+* Performed a filtering of outliers of the price column discussing the methods used to obtain them
+* Drew conclusions regarding the data set
+
+You can access the report by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Python%20(Pandas%2CNumpy)/Energy.png).
+
+### Inferential Statistics Report
+This is a group assignment for "Math & Statistics for Data Analysis" class where we covered the results of a survey sent out to IE Master students about pizza and hamburger preferences and the following statistical analysis of those results. The objective of this report is to show how statistical analysis helps us achieve pertinent conclusions even in simple surveys like the one done here. You can access the report by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Math%20%26%20Statistics%20for%20Data%20Analysis/Inferential%20Statistics%20Report.pdf).
+
+# [Natural Language Processing](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Natural%20Language%20Processing)
+### NLP Class Exercises
+##### [Language Models.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/Language%20Models.ipynb)
+In this notebook we went through creating sentences from grams.
+
+##### [NER.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/NER.ipynb)
+In this practical lab we focused on one of the main Information Extraction methodologies: Named Entity Recognition (NER). NERs focus is to to detect and classify the names in the text. In the theoretical session we also presented three main methodologies to address the recognition of named entities:
+* Hidden Markov Models
+* MaxEnt Markov Models
+* Conditional Random Fields
+
+##### [POS Tagging.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/POS%20Tagging.ipynb)
+In this notebook we went through the process of POS tagging.
+
+##### [Semantics.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/Semantics.ipynb)
+NLTK provides a useful WordNet interface to play with the WordNet data (included into the nltk.corpus). In this notebook we learned how to use it.
+
+### Disaster Tweets (Kaggle)
+On a general note, this assignment was in particular interesting because even though concepts and theory from class was understood, we still had not run any sort of machine learning process like this. It was not until after the process of EDA I understood that when we vectorize the text, creating new features and doing “normal” machine learning processes are completely different. For me, that was the biggest discovery of this assignment. The machine learning process is way different, and that highlights the importance of proper cleaning and processing of the text.
+
+We used the Kaggle competiton [Real or Not? NLP with Disaster Tweets](https://www.kaggle.com/c/nlp-getting-started), and both the report and python notebook is incluced in this repository. You can access the notebook by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Disaster%20Tweets.ipynb) and the report can be accessed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Disaster%20Tweets%20Report.pdf).
+
+### The Great Firewall of China - State of the Art Report
+Natural language processing techniques cover a wide variety of practical applications. NLP can be used for everything from judging sentiment to identifying spam, but one of the most dynamic applications is through encoding and decoding. While the idea of “codes” might bring to mind Indiana Jones movies, the modern use cases more often concern hiding content from government and private companies, and on the other hand, decoding said information. Tight censoring regulations in China have resulted in widespread use of modern language processing, with citizens developing an ever-evolving lexicon of codewords, while the government and social platforms try to keep up. This chase has led to a game of cat-and-mouse, that while deeply restrictive for the Chinese people, has also created practical applications for state-of-the-art natural language processing techniques. The report can be accessed by clicking the file "The Great Firewall of China Report.pdf" or by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/The%20Great%20Firewall%20of%20China%20Report.pdf).
 
 # [NoSQL (MongoDB,HBase)]()
 
