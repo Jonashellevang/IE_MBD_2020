@@ -168,19 +168,19 @@ This is a group assignment for "Math & Statistics for Data Analysis" class where
 
 # [Natural Language Processing](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Natural%20Language%20Processing)
 ### NLP Class Exercises
-##### [Language Models.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/Language%20Models.ipynb)
+#### [Language Models.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/Language%20Models.ipynb)
 In this notebook we went through creating sentences from grams.
 
-##### [NER.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/NER.ipynb)
+#### [NER.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/NER.ipynb)
 In this practical lab we focused on one of the main Information Extraction methodologies: Named Entity Recognition (NER). NERs focus is to to detect and classify the names in the text. In the theoretical session we also presented three main methodologies to address the recognition of named entities:
 * Hidden Markov Models
 * MaxEnt Markov Models
 * Conditional Random Fields
 
-##### [POS Tagging.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/POS%20Tagging.ipynb)
+#### [POS Tagging.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/POS%20Tagging.ipynb)
 In this notebook we went through the process of POS tagging.
 
-##### [Semantics.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/Semantics.ipynb)
+#### [Semantics.ipynb](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/Class%20Exercises/Semantics.ipynb)
 NLTK provides a useful WordNet interface to play with the WordNet data (included into the nltk.corpus). In this notebook we learned how to use it.
 
 ### Disaster Tweets (Kaggle)
@@ -191,25 +191,85 @@ We used the Kaggle competiton [Real or Not? NLP with Disaster Tweets](https://ww
 ### The Great Firewall of China - State of the Art Report
 Natural language processing techniques cover a wide variety of practical applications. NLP can be used for everything from judging sentiment to identifying spam, but one of the most dynamic applications is through encoding and decoding. While the idea of “codes” might bring to mind Indiana Jones movies, the modern use cases more often concern hiding content from government and private companies, and on the other hand, decoding said information. Tight censoring regulations in China have resulted in widespread use of modern language processing, with citizens developing an ever-evolving lexicon of codewords, while the government and social platforms try to keep up. This chase has led to a game of cat-and-mouse, that while deeply restrictive for the Chinese people, has also created practical applications for state-of-the-art natural language processing techniques. The report can be accessed by clicking the file "The Great Firewall of China Report.pdf" or by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Natural%20Language%20Processing/The%20Great%20Firewall%20of%20China%20Report.pdf).
 
-# [NoSQL (MongoDB,HBase)]()
+# [NoSQL (MongoDB,HBase)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/NoSQL%20(MongoDB%2CHBase))
+### MongoDB and HBase Summary
+I didn't have much work for HBase as it was not a part of an assignment. I therefore decided to upload my summary document I used to prepare for the Exam that I got full marks on. It's not the cleanest document as it was meant for personal use, but hopefully it will either help you or show you what I know. By clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/NoSQL%20(MongoDB%2CHBase)/MongoDB%20and%20HBase%20Summary.pdf) you can see the work done.
 
-# [Python (Pandas,Numpy)]()
+### MongoDB Queries
+This was a group assignment where we did some simple queries. By clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/NoSQL%20(MongoDB%2CHBase)/MongoDB.pdf) you can see the work done.
 
-# [R - COVID-19 Global Forecasting]()
+# [Python (Pandas,Numpy)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Python%20(Pandas%2CNumpy))
+### Creating Functions (.py)
+For this group assignment we created different functions to obtain information. You can access the file to see the work done by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Python%20(Pandas%2CNumpy)/Creating%20Functions.py).
 
-# [R - Shiny App with Leaflet in R-Markdown]()
+### Energy Analysis (.ipynb)
+This was an individual assignment where I used a dataset for energy in Spain. By clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Python%20(Pandas%2CNumpy)/Energy%20Analysis.ipynb) you can see the work done.
 
-# [R - Solar Energy Prediction]()
+### IMDb Analysis (.ipynb)
+This was an individual assignment where I used a dataset for IMDb and analyzed the data. By clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Python%20(Pandas%2CNumpy)/IMDb%20Analysis.ipynb) you can see the work done.
 
-# [Recommendation Engines]()
+# [R - COVID-19 Global Forecasting](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/R%20-%20COVID-19%20Global%20Forecasting)
+# COVID-19 Global Forecasting (Kaggle)
+In this assignment we tackle the COVID-19 prediction competition hosted on [Kaggle](https://www.kaggle.com/c/covid19-global-forecasting-week-4/overview). We first start by a general Exploratory Data Analysis, that can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20COVID19%20Global%20Forecasting%20/work_EDA.Rmd). However, I would recommend seeing the work where you can play with the EDA by clicking [this link](https://jonashellevang.shinyapps.io/COVID19_Forecasting_EDA/). We focus the EDA on the provided data, as well as external data to find more insights and information about the pandemic. We then try various modeling approaches ([time series model](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20COVID19%20Global%20Forecasting%20/ts_model.R) and [machine learning model](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20COVID19%20Global%20Forecasting%20/ml_model.R)) to predict the trends of the spread of the virus in the studied countries given. Our goal was to provide the most effective model, trying to include the most relevant information into our models.
 
-# [Regression - Real Estate in Madrid (Dataiku)]()
+# [R - Shiny App with Leaflet in R-Markdown](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/R%20-%20Shiny%20App%20with%20Leaflet%20in%20R-Markdown)
+### Shiny Application and Leaflet for Boston Housing Data
+For an assignment in "Advanced R" class we were given some choices of datasets from where we were to build an interactive map using any mapping tool we wanted, and R-markdown file as well as a Shiny application. I chose the Boston Housing data. Where in Boston do you want your children to grow up? In thes map, you can see which areas is safer and where your children can get more time with their teacher. For you as a parent, or even if you don’t have kids, you can enjoy other selection criterions as well, including where you should live based on pricing and similar people like yourself. The result of the Shiny application can be viewed by clicking [this link](https://jonashellevang.shinyapps.io/Boston_Housing/), and the R-Markdown can be accessed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20Shiny%20App%20with%20Leaflet%20in%20R-Markdown/Shiny%2C%20Leaflet%20and%20R-markdown.Rmd).
 
-# [Reinforcement Learning (AWS)]()
+# [R - Solar Energy Prediction](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/R%20-%20Solar%20Energy%20Prediction)
+### AMS 2013-2014 Solar Energy Prediction Contest (Kaggle)
+The goal of this contest was to discover which statistical and machine learning techniques provide the best short term predictions of solar energy production. We  predicted the total daily incoming solar energy at 98 Oklahoma Mesonet sites, which serves as "solar farms" for the [Kaggle competition](https://www.kaggle.com/c/ams-2014-solar-energy-prediction-contest). The R-Markdown is published and can be viewed by clicking [this link](https://rpubs.com/jonashellevang/Exploratory_Data_Analysis). You can also see the raw file by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/R%20-%20Solar%20Energy%20Prediction/Exploratory%20Data%20Analysis.Rmd).
 
-# [SQL]()
+The MAE score of our best SVM model on Kaggle was 2,290,458 (public) & 2,529,143 (private). This was also the best score amongst our peers in the class.
 
-# [Smart Cities & Governments]()
+# [Recommendation Engines](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Recommendation%20Engines)
+### Recommendation Engines: Business Case - Instagram
+For this group assignment in "Recommendation Engines" class we had to describe a business case that uses at least one recsys, and for this we chose to write about Instagram. The main goal was to apply the strategic thinking we learned in class in a deeper way. If you want to read the report, you can access it by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Recommendation%20Engines/Business%20Case%20-%20Instagram.pdf).
+
+# [Regression - Real Estate in Madrid (Dataiku)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Regression%20-%20Real%20Estate%20in%20Madrid%20(Dataiku))
+### Regression - Real Estate in Madrid
+The report summarizes the real state analysis done to properties located in Madrid. In the report I explain the method used to obtain the real state data, a description of the characteristics of the data obtained and what they mean, the cleaning process of it, the applied regression model and finally some conclusions from the data. You can access the report by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Regression%20-%20Real%20Estate%20in%20Madrid%20(Dataiku)/Regression%20-%20Real%20Estate%20Madrid%20Report.pdf).
+
+# [Reinforcement Learning (AWS)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Reinforcement%20Learning%20(AWS))
+### AWS Deep Racer
+As an assingment for the class "Reinforcement Learning" we had to learn how to make a car drive by itself. Yes, I agree, it sounds like a cool assignment right? And it was, I think it was my favorite, and it was so addicting! I Built models in Amazon SageMaker where I trained, tested, and iterated quickly and easily on the track in the AWS DeepRacer 3D racing simulator. The youtube link to access the video can be viewed [here](https://youtu.be/nVsVUfC0EdE). Below you can see a GIF of my race and the scoreboard where I placed 3rd out of 17 participants in my group:
+
+![AWS DeepRacer](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Reinforcement%20Learning%20(AWS)/DeepRacer.gif)
+
+### Lunar Lander
+For our first assignment in "Reinforcement Learning" I worked with the OpenAI's Lunar Lander gym. I used reinforcement learning (RL) to train a lunar lander vehicle in a Box2D simulation environment to land itself on the surface of the moon. I adjusted hyperparameters and the reward function as I considered appropriate, ran the training multiple times and compared the results. The notebook can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Reinforcement%20Learning%20(AWS)/lunarlander.ipynb).
+
+### Q-Learning Report and Presentation
+As a group project in the class "Reinforcement Learning" we chose to dive deeper into the topic of Q-learning. Within reinforcement learning there are two main algorithm methods; model-based and model-free. To read the report you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Reinforcement%20Learning%20(AWS)/Q-Learning%20Report.pdf). The presentation can also be viewed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Reinforcement%20Learning%20(AWS)/Q-Learning%20Presentation.pdf).
+
+### Reinforcement Learning - Final Report
+Due to the COVID situation our professor decided not to have an exam, rather we sent him a paper answering several questions. The report can be viewed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Reinforcement%20Learning%20(AWS)/Reinforcement%20Learning%20-%20Final%20Report.pdf), and the report answers these questions:
+1. What is Reinforcement Learning and how is it different from other methods like Supervised or Unsupervised Learning
+2. What are Markov Decision Process (MDP) and Bellman’s equation?
+3. What is a Dynamic Programming (DP) method and how is it different from MDP methods?
+4. What is a Multi-armed Bandit problem, and what are example applications of it in real-life?
+5. Explain 2 algorithms for solving a Multi-Armed Bandit problem
+6. What is the difference between Model-based and Model-free RL methods?, describe a method for each
+7. What is the difference between On-policy and Off-policy RL methods?, describe a method for each
+8. What are the advantages and disadvantages of Monte Carlo (MC) methods vs Temporal Difference (TD) methods?
+9. What is SARSA and how is it different from Q-learning?
+10. Describe the following three RL algorithms, and how these work in high level:
+* Principal Policy Optimization (PPO)
+* Meta-Q-learning
+* Asynchronous Advantage Actor Critic (A3C)
+
+# [SQL](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/SQL)
+For our "SQL & Data Modelling" class we had two group assignments, one with some very basic queries to introduce us to SQL that can be viewed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/SQL/Simple%20Queries%20Group%20Assignment.pdf), and one with a little bit more advanced queries that can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/SQL/More%20Advanced%20Queries%20Group%20Assignment%202.pdf).
+
+# [Smart Cities & Governments](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Smart%20Cities%20%26%20Governments)
+###  Mlimi - Empowering Malawians
+Smart Cities & Governments: The economy of Malawi, the southern Africa country, is predominantly based on agriculture. Indeed, agriculture accounts for 30% of GDP and generates over 80% of national export earnings. The sector employs more than 60% of the country’s workforce and greatly contributes to food and nutrition security. Although there is potential for better production and productivity, the agriculture sector has been operating greatly below its capacity and faces many challenges. Malawi is the third poorest country in the world with half the population living below the poverty line. To navigate our work and solution, we here give an overview of the deliverables and where they fit in:
+* [PDF report](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Smart%20Cities%20%26%20Governments/Empowering%20Malawians%20Report.pdf): the full report explaining the problem and solution we came up with and our reasoning
+* [Prototype Model Jupyter Notebook](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Smart%20Cities%20%26%20Governments/Empowering%20Malawians%20Prototype.ipynb): as will be tackled in the report, we have developed a prototype machine learning model to illustrate one of our solutions. This is an illustration that our proposition could be implemented
+* Javascript Google Earth Engine sample: We have extracted data from Google Earth Engine, as described in the report.
+
+### Oslo as a Smart City
+For this individual assignment in "Smart Cities & Governments" class we had to find “use cases” that a city of our own choice has implemented. I decided to write about Oslo, not only because I'm Norwegian and have lived there for 5 years, but also because it is one of the leading countries with smart city technology. If you want to read my work, you can access the report by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Smart%20Cities%20%26%20Governments/Oslo%20as%20a%20Smart%20City%20Report.pdf).
 
 # [Social Network Analysis (Python,R)]()
 
