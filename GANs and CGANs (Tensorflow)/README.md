@@ -1,5 +1,5 @@
 # Deep Generative Adverserial Nets
-This practice session pursues the following objectives:
+In this group assignment in "Machine Learning III" class we pursued the following objectives:
 - To understand and create our own Generative Adversarial Neural Nets
 - To evolve them to create Conditional Adversarial Neural Nets
 
