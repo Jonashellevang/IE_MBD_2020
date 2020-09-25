@@ -88,12 +88,12 @@ This third assignment "Business Intelligence and Datawarehousing" class was done
 ### Crimes in San Francisco (Carto)
 For our "Data Visualization" class I created this Carto visualization, where I focused on where you find the most crime in San Francisco. Factors such as income, where police stations are placed in the city and population can be found while investigating the map.
 
-![Crime in San Fransisco](Carto.png)
+![Crime in San Fransisco](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/Carto.png)
 
 ### One week of Jonas' Sleep (D3.js)
 As a group assignment for our "Data Visualization" class we decided to create a visualization of my sleep where we chose a random week of the year. I have a love of electronic devices, and have tracked movement, sleep, and other health data for years through alarm clock's, weight scales, Apple Watch and my iPhone. It was fun to see how it was possible to visualize some of this data.
 
-![D3.js Visualization](D3.png)
+![D3.js Visualization](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/D3.png)
 
 The code can be viewed [here](http://bl.ocks.org/Jonashellevang/03ec4d5e4593a451445e8726076dbe61), and the visualization is best viewed by [clicking this link](http://bl.ocks.org/Jonashellevang/raw/03ec4d5e4593a451445e8726076dbe61/).
 
