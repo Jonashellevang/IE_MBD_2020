@@ -51,11 +51,24 @@ This is a binary Kaggle competition using the HR Analytics dataset including exp
 ### Pump it Up: Data Mining the Water Table (DrivenData)
 This is a multi-class DrivenData competition done using data from Taarifa and the Tanzanian Ministry of Water where the objective is to predict which water pumps are functional or need repairs. It was done as a group assignment as part of our "Machine Learning II" coursework using Python. The final result achieved was a classification rate of 0.8129 (top 10%). Link to the competition can be found [here](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/), and the python notebook can be accessed through [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Classification%20(sklearn%2Cmatplotlib)/Water%20Pump%20Prediction.ipynb).
 
-# [Classification on Images (sklearn)]()
+# [Classification on Images (sklearn)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Classification%20on%20Images%20(sklearn))
+### Classifying Cars, Planes and Trains
+In this "Computer Vision" class assignment I experimented with various models trying to predict the 3 different commute machines from the VOC dataset. Various methods and pre-processing steps was tried out, where the selected best pre-processing step used on the Decision Tree Classifier was used on other machine learning models to predict if it is a plane, automobile or a train. The notebook can be reviewed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Classification%20on%20Images%20(sklearn)/Classifying%20Cars%2C%20Planes%20and%20Trains.ipynb).
 
-# [Cluster Analysis (Dataiku)]()
+# [Cluster Analysis (Dataiku)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Cluster%20Analysis%20(Dataiku))
+### Cluster Analysis for a Retail Company
+The report summarizes the Cluster analysis done to the stores of a retail company located in Bogotá. This data was given by a real retail company with the objective of classifying their stores in categories based on the demographic and sales data at hand, to better distribute the product portfolio in their stores to maximize sales. To view the report you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Cluster%20Analysis%20(Dataiku)/Cluster%20Analysis%20Report.pdf), and to view the presentation you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Cluster%20Analysis%20(Dataiku)/Cluster%20Analysis%20Presentation.pdf).
 
-# [Computer Vision (YOLOv3)]()
+# [Computer Vision (YOLOv3)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Computer%20Vision%20(YOLOv3))
+### Protecting The Endangered - Saving Elephants With YOLOv3
+The estimated population of elephants decreased from 12 million to 400 000 in the last century alone according to the WWF. Moreover, an estimated 20,000 elephants are poached for their tusks every year. Our aim of this "Computer Vision" project was to provide a solution where a drone would be sending real-time streams to a control room where our custom-trained object detector could help with:
+
+1. Precise control of population of endangered species;
+2. Poaching control;
+3. Control of movement of animals in order to save them from especially dangerous
+zones.
+
+The notebook is quite long due to all the coding, but can be accessed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Computer%20Vision%20(YOLOv3)/Saving%20Elephants%20with%20YOLOv3.ipynb). If you want a better picture of the work, the report is a better option and can be accessed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Computer%20Vision%20(YOLOv3)/Saving%20Elephants%20with%20YOLOv3%20Report.pdf).
 
 # [Data Integration Design (Pentaho)]()
 
