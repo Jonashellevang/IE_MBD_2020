@@ -27,7 +27,18 @@ The task in "Big Data & Health" class was to improve the way a typical blood tes
 ### Your.md (Now Healthily) App Presentation
 Your.md, now changed name to Healthily, is a free app where anyone, anywhere can find safe and personalised information, guidance and support for their health. This was a very quick presentation.
 
-# [CNN (Tensorflow,Keras)]()
+# [CNN (Tensorflow,Keras)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/CNN%20(Tensorflow%2CKeras))
+### Convolutional Neural Nets
+As the first group assignment in "Machine Learning 3" we had to learn how to code CNNs, and as a bonus exercise, I created a [YOLOv3 Tutorial](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/YOLOv3%20Tutorial). For the three first exercises, our goal was to build a neural net for classifying cats and dogs images, use regularization techniques and the consept of Transfer Learning on the Flower dataset.
+
+The report can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CNN%20(Tensorflow%2CKeras)/CNN%20Report.pdf), and the exercise files can be accessed here:
+* [Exercise 1 - Cats vs. Dogs](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CNN%20(Tensorflow%2CKeras)/CNN%20Cats_vs_Dogs%20Exercise%201.ipynb)
+* [Exercise 2 - Cats vs. Dogs](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CNN%20(Tensorflow%2CKeras)/CNN%20Cats_vs_Dogs%20Exercise%202.ipynb)
+* [Exercise 3 - Cats vs. Dogs](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CNN%20(Tensorflow%2CKeras)/CNN%20Cats_vs_Dogs%20Exercise%203.ipynb)
+* [Exercise 3 - Flowers](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CNN%20(Tensorflow%2CKeras)/CNN%20Flowers%20Exercise%203.ipynb)
+
+### How to Avoid Overfitting
+As part of a forum exercise in "Computer Vision" class I wrote a short paragraph about how to avoid overfitting in CNNs. This can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/CNN%20(Tensorflow%2CKeras)#how-to-avoid-overfitting).
 
 # [CRISP-DM Methodology]()
 
