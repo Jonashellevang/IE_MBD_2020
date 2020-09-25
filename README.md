@@ -1,6 +1,13 @@
 # IE_MBD_2020
 This repository contains projects carried out during my Master's in Business Analytics & Big Data program while at IE School of Human Science and Technology (IE University), as well as some projects carried out by my own initiative. Below you will find a short description of each folder and what projects they contain. Whitin each folder you will be able to find more extensive summaries and descriptions ot the projects.
 
+# [Advanced Python](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Advanced%20Python)
+### Package a Machine Learning Model
+The task of this "Advanced Python" class assignment was to convert a machine learning model into a Python library that can be easily deployed. The folder can be accessed by [clicking this link](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Advanced%20Python/Package%20a%20Machine%20Learning%20Model).
+
+### Deploy a Machine Learning Model
+The task of this "Advanced Python" class assignment was to convert a Python library containing a reusable machine learning model into a web application with Flask. The folder can be accessed by [clicking this link](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Advanced%20Python/Deploy%20a%20Machine%20Learning%20Model).
+
 # [Big Data & Health]()
 ### 23andMe: Genetic Testing for Consumers Report
 For my "Big Data & Health" class we had to write a report based on our personal opinions about the case between the FDA in the USA and 23andMe.
