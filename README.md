@@ -271,10 +271,49 @@ Smart Cities & Governments: The economy of Malawi, the southern Africa country, 
 ### Oslo as a Smart City
 For this individual assignment in "Smart Cities & Governments" class we had to find “use cases” that a city of our own choice has implemented. I decided to write about Oslo, not only because I'm Norwegian and have lived there for 5 years, but also because it is one of the leading countries with smart city technology. If you want to read my work, you can access the report by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Smart%20Cities%20%26%20Governments/Oslo%20as%20a%20Smart%20City%20Report.pdf).
 
-# [Social Network Analysis (Python,R)]()
+# [Social Network Analysis (Python,R)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Social%20Network%20Analysis%20(Python%2CR))
+### Social Network Analysis Summary
+I made this summary as a way to study for the Social Networks Analysis exam. In the file you can see the consepts covered in class. Click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Social%20Network%20Analysis%20(Python%2CR)/Social%20Network%20Analysis%20Summary.pdf).
 
-# [Spark]()
+### Work Migration
+When we decided to pick this data we were looking forward to the challenges this would bring us, but we had no idea how it all would turn out both for our business case or graphs. What it turned out to be, was a data that only really made sense to get some of the centrality-measures out of. In order to get data that made sense, we cleaned our data and removed the variables that was duplicate in a sense of how we wanted to present our data.
 
-# [Streaming (Spark Stream,Kafka)]()
+In this assignment for "Social Network Analysis" class, using LinkedIn data based on migration from countries, I used different techniques to draw insights from the data. To see the presentation, click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Social%20Network%20Analysis%20(Python%2CR)/Work%20Migration%20Presentation.pdf). To see the python notebook, click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Social%20Network%20Analysis%20(Python%2CR)/Work%20Migration.ipynb). To see the map created you need to click [this link](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Social%20Network%20Analysis%20(Python%2CR)#work-migration) or download the .ipynb (python notebook) file.
 
-# [YOLOv3 Tutorial]()
+# [Spark](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Spark)
+### Analyzing Flight Data
+According to a 2010 report made by the US Federal Aviation Administration, the economic price of domestic flight delays entails a yearly cost of 32.9 billion dollars to passengers, airlines and other parts of the economy. More than half of that amount comes from passengers' pockets, as they do not only waste time waiting for their planes to leave, but also miss connecting flights, spend money on food and have to sleep on hotel rooms while they're stranded. The work can be found through [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Spark/Analyzing%20Flight%20Data.ipynb).
+
+### San Francisco Flight Analysis
+Although I wouldn’t say that San Francisco is known for its crime, rather for its bridge and steep hills and houses. Still crime is everywhere, and it is interesting to see how this can be reduced. So how can we help the police of San Francisco, or SFPD, with its crime fighting? I have focused the analysis on location, time and severity of crime, and by doing so we can provide SFPD with facts such as in what areas there is most crime, what day crime happens the most and where. The best way to view the work is to read the report by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Spark/San%20Francisco%20Crime%20Analysis%20(2018%20until%20today)%20Report.pdf). If you wish to see the python file you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Spark/San%20Francisco%20Crime%20Analysis%20(2018%20until%20today).ipynb).
+
+# [Streaming (Spark Stream,Kafka)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Streaming%20(Spark%20Stream%2CKafka))
+### Real-Time Streaming Sentiment from Twitter
+For our group assignment in "Stream Processing & Real-Time Analytics" we had a presentation where we had to create a prototype based on using Real-Time Streaming. We decided to do real-time streaming from twitter using the sentiment of the topic chosen.
+
+This is the file structure:
+* The file ["twit.ipynb"](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Streaming%20(Spark%20Stream%2CKafka)/twit.ipynb) was used to connect to twitter.
+* The file ["ReadTweets.ipynb"](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Streaming%20(Spark%20Stream%2CKafka)) was used to read the tweets.
+* The file ["Mention_Analysis.ipynb"](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Streaming%20(Spark%20Stream%2CKafka)/Mention_Analysis.ipynb) was used to create the dashboard.
+
+The presentation can be viewed by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Streaming%20(Spark%20Stream%2CKafka)/Streaming%20Sentiment%20from%20Twitter%20Presentation.pdf).
+
+### Twitter Streaming with Spark Stream and Kafka
+Getting data from twitter in almost near real-time has many different use cases. For instance, a corporation may have the option to automatically track what people are tweeting about their brand in near real-time. Also, it may be possible to interact automatically with customers through twitter by developing a bot. Although this assignment is somewhat similar to the assignment above, it made me able to demonstrated my knowledge with Twitter. The report is quite self explanatory, so have a look at it by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Streaming%20(Spark%20Stream%2CKafka)/Twitter%20Streaming%20with%20Spark%20Stream%20and%20Kafka%20Report.pdf).
+
+# [YOLOv3 Tutorial](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/YOLOv3%20Tutorial)
+### YOLOv3 Object Detector For Detecting Guns - A Full Tutorial
+As the fourth task in our group assignment 1 for "Machine Learning 3" class we had an optional exercise to create a YOLOv3 notebook to locate & classify different objects in a single image. For this assignment I decided to create a tutorial for others to learn the process that I have gone through learning how YOLOv3 works.
+
+You Only Look Once (YOLO) is a neural network made for detecting objects and their location in the image created by Joseph Redmon. Yolov3 just means that it is the third verion of YOLO, and it is exciting news that YOLOv4 has already been launched in April 2020.
+
+Object detection is a task in computer vision to detect objects, their location, their magnitude, and what they are. In other words, it is algorithms you use to classify images, is it a cat or a dog? YOLOv3 is in the category of Region Proposal Classification Network (RCNN), but compared to its’ siblings, YOLO looks more like a Fully Convolutional Neural Network (FCNN). It is an algorithm using DarkNet and it is written in C.
+
+Why do we use YOLO and not either one of the other deep learning algorithms for classifying images?
+* YOLOv3 is much faster, where it reaches 45 frames per second, although it is no longer the most accurate where RetinaNet and SSD outperforms its' accuracy.
+* Detects multiple objects within the same image.
+* Widely used for videos due to its speed.
+
+Each image is associated with a label file saved as .txt file, and to be able to get this we have three options; we can build them from scratch with our own pictures and labels using a tool, we can use already labeled images or we can use pre-trained models. YOLOv3 is basically just another state-of-the-art (SOA), real-time object detection system for images and videos.
+
+To access the full tutorial you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/YOLOv3%20Tutorial/Weapon%20Detection%20with%20YOLOv3.ipynb).
