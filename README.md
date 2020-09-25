@@ -13,7 +13,7 @@ The task of this "Advanced Python" class assignment was to convert a Python libr
 For my "Big Data & Health" class we had to write a report based on our personal opinions about the case between the FDA in the USA and 23andMe. The report can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/23andMe%20Report.pdf).
 
 ### Healthcare Presentation
-For my "Introduction to Big Data and Analytics" course we had to chose a topic of interest to present to the rest of our classmates. I chose to look further into the healthcare industry, and how this industry can be transformed the coming years. The presentation can be accessed [here](Healtcare Presentation - Intro to Big Data.pdf).
+For my "Introduction to Big Data and Analytics" course we had to chose a topic of interest to present to the rest of our classmates. I chose to look further into the healthcare industry, and how this industry can be transformed the coming years. The presentation can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/Healtcare%20Presentation%20-%20Intro%20to%20Big%20Data.pdf).
 
 ### Lung Cancer (sckit-learn) Forum Post
 In "Computer Vision" class we had to demonstrate the use of some image preprocessing techniques using sckit-learn. I wanted to see if there was any preprocessing techniques that would highlight the presence of cancer in a person's x-rays, and from experimenting with a few techniques, where I used thresholding. The forum post can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Big%20Data%20%26%20Health#lung-cancer-sckit-learn).
@@ -44,7 +44,12 @@ As part of a forum exercise in "Computer Vision" class I wrote a short paragraph
 ### CRISP-DM Methodology Guide w/Practical Examples
 For our "The Knowledge Discovery Process" class we created a guide that can be used for you as a member of the analytical team of a company. We have presented a guide with examples for each phase of the CRISP-DM process, showing hands on which steps to take in each phase. The guide will teach you how to deal with each problem, and how to avoid mistakes or duplicate of work from any team that might be involved in the process. To read the report you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CRISP-DM%20Methodology/CRISP-DM%20Report.pdf), and to view the presentation you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CRISP-DM%20Methodology/CRISP-DM%20Presentation.pdf).
 
-# [Classification (sklearn,matplotlib)]()
+# [Classification (sklearn,matplotlib)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Classification%20(sklearn%2Cmatplotlib))
+### HR Analytics - Predicting Turnover For A Large Company (Kaggle)
+This is a binary Kaggle competition using the HR Analytics dataset including explanatory variables of around 15k employees of a large company. The goal of the case study was to model the probability of attrition (employees leaving, either on their own or because they got fired) of each individual, as well as to understand which variables are the most important ones and need to be addressed the right away. Link to the competition can be found [here](https://www.kaggle.com/lnvardanyan/hr-analytics), and the python notebook can be found by clicking [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Classification%20(sklearn%2Cmatplotlib)/Predicting%20Turnover.ipynb).
+
+### Pump it Up: Data Mining the Water Table (DrivenData)
+This is a multi-class DrivenData competition done using data from Taarifa and the Tanzanian Ministry of Water where the objective is to predict which water pumps are functional or need repairs. It was done as a group assignment as part of our "Machine Learning II" coursework using Python. The final result achieved was a classification rate of 0.8129 (top 10%). Link to the competition can be found [here](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/), and the python notebook can be accessed through [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Classification%20(sklearn%2Cmatplotlib)/Water%20Pump%20Prediction.ipynb).
 
 # [Classification on Images (sklearn)]()
 
