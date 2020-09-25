@@ -10,22 +10,22 @@ The task of this "Advanced Python" class assignment was to convert a Python libr
 
 # [Big Data & Health]()
 ### 23andMe: Genetic Testing for Consumers Report
-For my "Big Data & Health" class we had to write a report based on our personal opinions about the case between the FDA in the USA and 23andMe.
+For my "Big Data & Health" class we had to write a report based on our personal opinions about the case between the FDA in the USA and 23andMe. The report can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/23andMe%20Report.pdf).
 
 ### Healthcare Presentation
-For my "Introduction to Big Data and Analytics" course we had to chose a topic of interest to present to the rest of our classmates. I chose to look further into the healthcare industry, and how this industry can be transformed the coming years.
+For my "Introduction to Big Data and Analytics" course we had to chose a topic of interest to present to the rest of our classmates. I chose to look further into the healthcare industry, and how this industry can be transformed the coming years. The presentation can be accessed [here](Healtcare Presentation - Intro to Big Data.pdf).
 
 ### Lung Cancer (sckit-learn) Forum Post
-In "Computer Vision" class we had to demonstrate the use of some image preprocessing techniques using sckit-learn. I wanted to see if there was any preprocessing techniques that would highlight the presence of cancer in a person's x-rays, and from experimenting with a few techniques, where I used thresholding.
+In "Computer Vision" class we had to demonstrate the use of some image preprocessing techniques using sckit-learn. I wanted to see if there was any preprocessing techniques that would highlight the presence of cancer in a person's x-rays, and from experimenting with a few techniques, where I used thresholding. The forum post can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Big%20Data%20%26%20Health#lung-cancer-sckit-learn).
 
 ### SmellAway - Personal Health Manager Presentation
-As our last group project for "Big Data & Health" class we had to building an innovative data based product or service to improve the way people manage their health, with the goal of improving their health outcomes and customer health experience. Our answer to this was SmellAway!
+As our last group project for "Big Data & Health" class we had to building an innovative data based product or service to improve the way people manage their health, with the goal of improving their health outcomes and customer health experience. Our answer to this was SmellAway! The presentation can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/SmellAway%20Presentation.pdf).
 
 ### The Blood Test Makeover Presentation
-The task in "Big Data & Health" class was to improve the way a typical blood test report conveys information using our dataviz skills and our intuitions about what could improve the patient experience. We created a prototype and presentation for this assignment.
+The task in "Big Data & Health" class was to improve the way a typical blood test report conveys information using our dataviz skills and our intuitions about what could improve the patient experience. We created a prototype and presentation for this assignment. The presentation can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/The%20Blood%20Test%20Makeover%20Presentation.pdf).
 
 ### Your.md (Now Healthily) App Presentation
-Your.md, now changed name to Healthily, is a free app where anyone, anywhere can find safe and personalised information, guidance and support for their health. This was a very quick presentation.
+Your.md, now changed name to Healthily, is a free app where anyone, anywhere can find safe and personalised information, guidance and support for their health. This was a very quick presentation. The presentation can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Big%20Data%20%26%20Health/your.md%20Presentation.pdf).
 
 # [CNN (Tensorflow,Keras)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/CNN%20(Tensorflow%2CKeras))
 ### Convolutional Neural Nets
@@ -40,7 +40,9 @@ The report can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/
 ### How to Avoid Overfitting
 As part of a forum exercise in "Computer Vision" class I wrote a short paragraph about how to avoid overfitting in CNNs. This can be accessed [here](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/CNN%20(Tensorflow%2CKeras)#how-to-avoid-overfitting).
 
-# [CRISP-DM Methodology]()
+# [CRISP-DM Methodology](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/CRISP-DM%20Methodology)
+### CRISP-DM Methodology Guide w/Practical Examples
+For our "The Knowledge Discovery Process" class we created a guide that can be used for you as a member of the analytical team of a company. We have presented a guide with examples for each phase of the CRISP-DM process, showing hands on which steps to take in each phase. The guide will teach you how to deal with each problem, and how to avoid mistakes or duplicate of work from any team that might be involved in the process. To read the report you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CRISP-DM%20Methodology/CRISP-DM%20Report.pdf), and to view the presentation you can click [this link](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/CRISP-DM%20Methodology/CRISP-DM%20Presentation.pdf).
 
 # [Classification (sklearn,matplotlib)]()
 
