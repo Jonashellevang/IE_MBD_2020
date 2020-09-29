@@ -3,18 +3,18 @@ As a project I analyzed data for the fictional company Senesco AS. I cleaned and
 
 Although these images aren't interactive, they represent the three dashboards I made for this project:
 
-![](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/Dashboard%20Design%20(Power%20BI)/Dashboard%201.png)
+![](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau,PowerBI,R,Carto,D3.js)/Dashboard%20Design%20(Power%20BI)/Dashboard%201.png)
 
-![](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/Dashboard%20Design%20(Power%20BI)/Dashboard%203.png)
+![](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau,PowerBI,R,Carto,D3.js)/Dashboard%20Design%20(Power%20BI)/Dashboard%203.png)
 
-![](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/Dashboard%20Design%20(Power%20BI)/Dashboard%202.png)
+![](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau,PowerBI,R,Carto,D3.js)/Dashboard%20Design%20(Power%20BI)/Dashboard%202.png)
 
 # Dashboard Design (Tableau)
 During the first and second assignment of the class "Business Intelligence & Datawarehousing" we created a data warehouse and data integration processes. This third assignment was done on an individual basis and focused on generating value from our data warehouse by designing a dashboard using Tableau.
 
 The dashboard is created having the Sales Managers of the Federal Communications Commission (FCC) in mind, giving them an overview of the status of licenses specified as all, active, cancelled, expired and terminated. You can play with the visualization by clicking [this link](https://public.tableau.com/profile/jonas.hellevang#!/vizhome/FederalCommunicationsCommissionCustomersandAntennas/Dashboard).
 
-![Tableau Dashboard](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau,R,Carto,D3.js)/Dashboard%20Design%20(Tableau)/Dashboard.png)
+![Tableau Dashboard](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau,PowerBI,R,Carto,D3.js)/Dashboard%20Design%20(Tableau)/Dashboard.png)
 
 ### The Two Previous Assignments:
 * [Data Warehouse Modelling (MySQL)](https://github.com/Jonashellevang/IE_MBD_2020/tree/master/Data%20Warehouse%20Modelling%20(MySQL))
@@ -42,9 +42,9 @@ The code can be viewed [here](http://bl.ocks.org/Jonashellevang/03ec4d5e4593a451
 To get the visualization going, you click on the day you want to look at where "Day1" is Monday and so on, and click start. By doing so you can see that the bar line is moving through the hours of the night. You can also reset the chart, or simply press a new day and look at the new visualization, comparing the days with each other.
 
 # Worldwide Alcohol and Tobacco Consumption (R - ggplot)
-For our first assignment in our "Data Visualization" class we had to create a ggplot with several plots where we had plots that was both moving and not moving. Since there are so many plots for this one, not all of them are shown here, but if you would like to check them all out, please [check out the PDF of our R-Markdown](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/R%20-%20ggplot/Worldwide%20Alcohol%20and%20Tobacco%20Consumption.pdf). If you want to see the moving plots as well, I recommend you [download the HTML file](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/R%20-%20ggplot/Worldwide%20Alcohol%20and%20Tobacco%20Consumption.html).
+For our first assignment in our "Data Visualization" class we had to create a ggplot with several plots where we had plots that was both moving and not moving. Since there are so many plots for this one, not all of them are shown here, but if you would like to check them all out, please [check out the PDF of our R-Markdown](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau,PowerBI,R,Carto,D3.js)/R%20-%20ggplot/Worldwide%20Alcohol%20and%20Tobacco%20Consumption.pdf). If you want to see the moving plots as well, I recommend you [download the HTML file](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau,PowerBI,R,Carto,D3.js)/R%20-%20ggplot/Worldwide%20Alcohol%20and%20Tobacco%20Consumption.html).
 
-![Tobacco Consumption Europe](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau%2CR%2CCarto%2CD3.js)/R%20-%20ggplot/Tobacco%20Consumption%20Europe.png)
+![Tobacco Consumption Europe](https://github.com/Jonashellevang/IE_MBD_2020/blob/master/Data%20Visualization%20(Tableau,PowerBI,R,Carto,D3.js)/R%20-%20ggplot/Tobacco%20Consumption%20Europe.png)
 
 ### General Findings:
 
